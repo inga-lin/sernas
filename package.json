@@ -1,0 +1,12 @@
+{
+  "name": "sernas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "dead-server --port=3000 --host=localhost",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Inga",
+  "license": "ISC"
+}
