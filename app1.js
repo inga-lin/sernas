@@ -49,14 +49,36 @@ if (likoKuro <= 0){
 
 
 /*4)Vyksta automobilių žiedinės lenktynės. Automobiliui Nr. 55 liko nuvažiuoti 10 ratų (žiedų). Kiekviename žiede yra 5 posūkiai, kuriuose automobilio greitis yra atsitiktinis dydis nuo 20 iki 120 km/h. Imituokite tokią situaciją dviem for ciklais (vienas 10 ratų, kitas 5 posūkiai) ir ciklams pasibaigus atspausdinkite mažiausią automobilio greitį kažkuriame iš posūkių.*/
-let ratuKiekis = 0;
+let greitis1 = 120;
+
 
 for (let i = 0; i < 10; i++) { 
-    const randomDigit = rand(20, 120); 
-    ratuKiekis = randomDigit;
-    console.log(ratuKiekis);
+    for (let i = 0; i < 5; i++){ 
+        const randomDigit = rand(20, 120);
+        //console.log(randomDigit); 
+        if (randomDigit < greitis1){
+            greitis1 = randomDigit
+        }
+    }
 }
-console.log('--');
-console.log(Math.min(ratuKiekis));
 
+console.log(`Mažiausią automobilio greitį kažkuriame iš posūkių ${greitis1}`);
+
+
+console.log('-----------');
 /*5)(BOSO lygis) Dykumoje vyksta lenktynės. Automobilis Nr. 55 juose dalyvauja. Kiekviename kilometre gali atsitikti arba neatsitikti rand(0, 1) tokie trys įvykiai: netikėtai iššokti - neiišokti ant kelio kengūra, vairuotojas gali nespėti - spėti pasukti vairą ir vairuotojas gali nespėti - spėti paspausti stabdžius. Imituokite tokią situaciją do while ciklu- vienas kilometras vienas ciklo prasisukimas. Cikle rand() funkciją atsitiktinai generuokite visų įvykių tikimybę. Jeigu viename cikle įvyksta visi nepalankūs įvykiai: iššoka kengūra, vairuotojas nespėja pasukti vairo ir nespėja paspausti stabdžių while ciklą baikite. Ciklo pabaigoje atspausdinkite kiek kilometų sugebėjo nuvažiuoti automobilis be avarijos.*/
+
+let kilometruSkaicius = 0;
+let kengura = 0;
+let stabdis = 0;
+let pasuktiVaira = 0;
+
+
+do { 
+    kengura = rand(0, 1);
+    stabdis = rand(0, 1);
+    pasuktiVaira = rand(0, 1);
+    kilometruSkaicius++
+} while ( kengura + stabdis + pasuktiVaira !== 3);
+
+console.log(kilometruSkaicius);
