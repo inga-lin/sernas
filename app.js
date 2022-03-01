@@ -115,6 +115,40 @@ if ( karviuValtis <= 15 && katiniukuValtis <= 15){
     console.log('Netelpa');
 }
 
+console.log('-----------');
+console.log('-----------');
+
 /*4)Antanas nusipirko naują butą ir pinigų jam liko nedaug. Dabar jis niekaip negali apsispręsti ką pirmiausiai pirkti: televizorių, skalbimo mašiną ar šaldytuvą. Todėl nusprendžia ridenti kauliuką (atsitiktinis skaičius nuo 1 iki 6) ir jeigu iškris 1 arba 5 pirkti televizorių, jeigu 3 arba 4 pirkti skalbimo mašiną ir jeigu 2 arba 6 - šaldytuvą. Padėkite Antanui apsispręsti. Ridenkite kauliuką ir parašykite atsakymą kokį daiktą jam pirkti.*/
+const pirkiniai = rand(1, 6);
+console.log(pirkiniai);
+
+if (pirkiniai === 1 || pirkiniai === 5){
+    console.log('Antanas pirks televizoriu');
+} else if (pirkiniai === 3 || pirkiniai === 4) {
+    console.log('Antanas pirks skalbimo masina');
+} else {
+    console.log('Antanas pirks saldytuva');
+}
 
 /*5)(BOSO lygis) Sugeneruokite tris atsitiktinius skaičius nuo 1 iki 7. Skaičius atspausdinkite nuo mažiausio iki didžiausio. Pavyzdžiui: sugeneravus 4, 2, 4 juos reikia atspausdinti tokia tvarka: 2 4 4;*/
+
+let skaiciuEile = []; //tuscias masyvas
+
+for (let i = 0; i < 3; i++) {
+    const randomDigit = rand(1, 7); 
+    skaiciuEile.push(randomDigit);
+}
+
+console.log(skaiciuEile);
+skaiciuEile.sort(function(a, b){
+    return a - b
+});
+console.log(skaiciuEile);
+
+/*pvz 
+let numArray = [140000, 104, 99];
+numArray.sort(function(a, b) {
+  return a - b;
+});
+
+console.log(numArray);*/
