@@ -66,9 +66,9 @@ function rand(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-const skai10 = rand(1, 6)
+const skai10 = rand(1, 36)
 //console.log(skai10)
-const skai11 = rand(1, 6)
+const skai11 = rand(1, 36)
 //console.log(skai11)
 suma11 = skai11 + skai10;
 //console.log(suma11);
