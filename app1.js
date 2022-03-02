@@ -82,3 +82,6 @@ do {
 } while ( kengura + stabdis + pasuktiVaira !== 3);
 
 console.log(kilometruSkaicius);
+
+console.log('-----------');
+console.log('-----------');
