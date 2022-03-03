@@ -41,14 +41,20 @@ const ul = document.querySelectorAll('ul');
 
 console.log(li);
 
-for (let i = 0; i < li.length; i++){//padarom kad visi li elementai butu rozianiai
+for (let i = 0; i < li.length; i++){//padarom kad visi li elementai butu roziniai
     li[i].style.color = 'pink';
 
 }
 //cia tas pats kas foras(virsuje) tik kruciau uzrasoma(darbinantis taip reiktu rasyti)
 li.forEach(element => element.style.color = 'red');//cia paimam po viena li elementa ir jam pritaiko spalva ir tai daro kol visiems pritaiko spalvas
 
+//cia antras variantas
+/*li.forEach((element, i) => {
+    element.style.color = 'pink';
+    console.log(element.innerText, i);
+});*/
 
+console.log(ul.children);
 
 //console.log(ul.children);
 //ul.children.forEach( a => a)neveikia 
@@ -69,5 +75,5 @@ animalListH.forEach((element, i) => {
         } else {
             element.style.color = 'blue'
         }
-         
+        // element.style.color = i % 2 ? 'yellow' : 'blue'; 
     });
