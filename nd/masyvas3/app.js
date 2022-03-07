@@ -246,19 +246,20 @@ loterijosBilietai.sort()
 console.log(loterijosBilietai);   
 
 //16. Į piniginės popierinių pinigų skyrelį įdėti 500 pinigų mažom kupiūrom ( generuoti atsitiktinius skaičius nuo 3 iki 10 ir dėti kaip naujus elementus, kol įdėta suma bus lygi 500);
-/*
-console.log(didesniUz2); 
-let pinigai500 = 0;
 
+console.log(didesniUz2); 
+/*let pinigai500 = 0;
+let y = [];
 do {
     const x = rand(3, 10);
-    if (pinigai500 + x <= 500){
+    if (pinigai500 + x <= 500 ){
         pinigai500 = pinigai500 + x;
-        didesniUz2.push(x);
+        y.push(x);
     }
+
 }while (pinigai500 !== 500 && pinigai500 < 501);
 
-console.log(pinigai500);*/
+console.log(pinigai500); */
 
 //17.Patikrinti ar ką nors laimėjote. Bilieto numerius dalinkite iš 777 ir jeigu numeris išsidalins be liekanos - jūs laimėjote! Suskaičiuokite, kiek buvo laimingų bilietų.
 console.log(loterijosBilietai);
