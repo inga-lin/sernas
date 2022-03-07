@@ -78,7 +78,8 @@ console.log(happyCats);
 console.log('--------');
 
 /*masyvo N.D.*/
-//1Sukurti masyvą (piniginę), kurio ilgis yra atsitiktinis nuo 10 iki 30, o reikšmės atsitiktiniai skaičiai nuo 0 iki 10 (pinigai);
+//1Sukurti masyvą (piniginę), kurio ilgis yra atsitiktinis nuo 10 iki 30,
+// o reikšmės atsitiktiniai skaičiai nuo 0 iki 10 (pinigai);
 let pinigine = [];
 for (i = 0; i < rand(10, 30); i++ ){
     pinigine.push(rand(0, 10));//push tik masyve
@@ -86,7 +87,8 @@ for (i = 0; i < rand(10, 30); i++ ){
 
 console.log(pinigine);
 
-//2Naudojant ciklą apskaičiuoti masyvo iš 1 uždavinio reikšmių (pinigų esančių piniginėje) sumą;
+//2Naudojant ciklą apskaičiuoti masyvo iš 1 uždavinio reikšmių
+// (pinigų esančių piniginėje) sumą;
 
 let piniguSuma = 0;
 for ( i = 0; i < pinigine.length; i++){
@@ -95,7 +97,8 @@ for ( i = 0; i < pinigine.length; i++){
 
 console.log(piniguSuma);
 
-//3Naudojant ciklą apskaičiuoti masyvo iš 1 uždavinio popierinių pinigų (skaičių didesnių už 2 ) reikšmių sumą;
+//3Naudojant ciklą apskaičiuoti masyvo iš 1 uždavinio popierinių
+// pinigų (skaičių didesnių už 2 ) reikšmių sumą;
 
 
 let sumaPinigu = 0;
@@ -107,7 +110,9 @@ for ( i = 0; i < pinigine.length; i++){
 }
 console.log(sumaPinigu);
 
-//4 Išleisti visus metalinius pinigus (reikšmes, kurios yra mažesnės arba lygios 2 padaryti lygias 0) iš 1 uždavinio;
+//4 Išleisti visus metalinius pinigus 
+//(reikšmes, kurios yra mažesnės arba lygios 2 padaryti lygias 0)
+// iš 1 uždavinio;
 const naujaPinigine = [];
 
 for (i = 0; i < pinigine.length; i++){
@@ -120,7 +125,8 @@ for (i = 0; i < pinigine.length; i++){
     
 console.log(naujaPinigine);
 
-//5.Surasti didžiausią reikšmę 1 uždavinio masyve ir paskaičiuoti kiek tokių didžiausių reikšmių masyve yra;
+//5.Surasti didžiausią reikšmę 1 uždavinio masyve
+// ir paskaičiuoti kiek tokių didžiausių reikšmių masyve yra;
 
 let didziausiasSkaicius = 0;
 
@@ -142,7 +148,8 @@ for ( i = 0; i < pinigine.length; i++){
 console.log(didziausiuSkaiciuSkaicius);
 
 
-//6.Visus masyvo elementus, kurie yra lygūs 0, pakeisti į tų elementų indeksų (vietų, numerių) reikšmes;
+//6.Visus masyvo elementus, kurie yra lygūs 0, 
+//pakeisti į tų elementų indeksų (vietų, numerių) reikšmes;
 
 const naujasMasyvas = [];
 for (i = 0; i < pinigine.length; i++){
@@ -154,7 +161,9 @@ for (i = 0; i < pinigine.length; i++){
 }
 console.log(naujasMasyvas);
 
-//7. Į 1 uždavinio masyvą pridėti tiek naujų reikšmių (pinigų, atsitiktinių skaičių nuo 0 iki 10), kad masyvo ilgis būtų lygiai 30;
+//7. Į 1 uždavinio masyvą pridėti tiek naujų reikšmių 
+//(pinigų, atsitiktinių skaičių nuo 0 iki 10), 
+//kad masyvo ilgis būtų lygiai 30;
 
 const naujaPiniginesReiksme = 30 - pinigine.length;
 console.log(naujaPiniginesReiksme);
@@ -165,7 +174,9 @@ for (i = 0; i < naujaPiniginesReiksme; i++){
 
 console.log(pinigine);
 
-//8.Naudojant 1 uždavinio masyvą iš jo reikšmių sukurti dar du papildomus masyvus. Į vieną iš 1 uždavinio masyvo pridėti reikšmes mažesnes arba lygias 2 (monetas), o į kitą didesnes nei 2 (popierinius pinigus);
+//8.Naudojant 1 uždavinio masyvą iš jo reikšmių sukurti dar du papildomus masyvus.
+// Į vieną iš 1 uždavinio masyvo pridėti reikšmes mažesnes arba lygias 2 (monetas),
+// o į kitą didesnes nei 2 (popierinius pinigus);
 
 const mazesniUz2 = [];
 const didesniUz2 = [];
@@ -181,14 +192,18 @@ for ( i = 0; i < pinigine.length; i++){
 console.log(mazesniUz2);
 console.log(didesniUz2);
 
-//9. Sukurti masyvą (piniginę su dviem skyreliais) iš dviejų elementų, kurio pirmas elementas būtų masyvas iš 8 uždavinio su monetom, o antras elementas masyvas iš 8 uždavinio su popieriniais pinigais;
+//9. Sukurti masyvą (piniginę su dviem skyreliais) iš dviejų elementų,
+// kurio pirmas elementas būtų masyvas iš 8 uždavinio su monetom,
+// o antras elementas masyvas iš 8 uždavinio su popieriniais pinigais;
 
 const uzduotis9 = [];
 uzduotis9.push(mazesniUz2);
 uzduotis9.push(didesniUz2);
 console.log(uzduotis9);
 
-//10. Į 9 uždavinio masyvą, piniginę su dviem skyreliais, pridėti trečią skyrelį- masyvą su kortelėm: ['KIKA', 'Euro Vaistinė', 'Drogas', 'Ačiū', 'Lietuvos Geležinkeliai', 'Mano RIMI'];
+//10. Į 9 uždavinio masyvą, piniginę su dviem skyreliais,
+// pridėti trečią skyrelį- masyvą su kortelėm: 
+//['KIKA', 'Euro Vaistinė', 'Drogas', 'Ačiū', 'Lietuvos Geležinkeliai', 'Mano RIMI'];
 const korteles = ['KIKA', 'Euro Vaistinė', 'Drogas', 'Ačiū', 'Lietuvos Geležinkeliai', 'Mano RIMI'];
 uzduotis9.push(korteles)
 console.log(uzduotis9);
@@ -198,7 +213,10 @@ console.log(uzduotis9);
 korteles.sort();
 console.log(uzduotis9);
 
-//12. Į kortelių skyrelį pridėti mokėjimo kortelių 'MasterCard', 'Visa' (su rand generuokite atsitiktines reikšmes 'MasterCard' arba 'Visa' ir rašykite į masyvą) iš skirtingų bankų tiek, kad skyrelis (masyvo ilgis) pasidarytų lygus 20;
+//12. Į kortelių skyrelį pridėti mokėjimo kortelių 'MasterCard',
+// 'Visa' (su rand generuokite atsitiktines reikšmes 'MasterCard'
+// arba 'Visa' ir rašykite į masyvą) iš skirtingų bankų tiek, 
+//kad skyrelis (masyvo ilgis) pasidarytų lygus 20;
  const naujosKorteles = 20 - korteles.length;
  console.log(naujosKorteles);
 
@@ -230,7 +248,9 @@ for ( i = 0; i < korteles.length; i++){
 console.log(master);
 console.log(visa);
 
-// 14.Sukurkite masyve (piniginėje) ketvirtą elementą (skyrelį) į kurį įdėkite 10 loterijos bilietų, kurių numerius sugeneruokite atsitiktinai su rand funkcija nuo 1000000000 iki 9999999999;
+// 14.Sukurkite masyve (piniginėje) ketvirtą elementą (skyrelį)
+// į kurį įdėkite 10 loterijos bilietų, kurių numerius sugeneruokite
+// atsitiktinai su rand funkcija nuo 1000000000 iki 9999999999;
 const loterijosBilietai = [];
 for (i = 0; i < 10; i++){
     loterijosBilietai.push(rand(1000000000, 9999999999))
@@ -245,7 +265,9 @@ console.log(uzduotis9);
 loterijosBilietai.sort()
 console.log(loterijosBilietai);   
 
-//16. Į piniginės popierinių pinigų skyrelį įdėti 500 pinigų mažom kupiūrom ( generuoti atsitiktinius skaičius nuo 3 iki 10 ir dėti kaip naujus elementus, kol įdėta suma bus lygi 500);
+//16. Į piniginės popierinių pinigų skyrelį įdėti 500 pinigų mažom kupiūrom
+// ( generuoti atsitiktinius skaičius nuo 3 iki 10 ir dėti kaip naujus 
+//elementus, kol įdėta suma bus lygi 500);
 
 console.log(didesniUz2); 
 /*let pinigai500 = 0;
@@ -270,7 +292,9 @@ while (sum < 500) {
 console.log(sum);
 console.log(loterijosBilietai);*/
 
-//17.Patikrinti ar ką nors laimėjote. Bilieto numerius dalinkite iš 777 ir jeigu numeris išsidalins be liekanos - jūs laimėjote! Suskaičiuokite, kiek buvo laimingų bilietų.
+//17.Patikrinti ar ką nors laimėjote. 
+//Bilieto numerius dalinkite iš 777 ir jeigu numeris išsidalins
+// be liekanos - jūs laimėjote! Suskaičiuokite, kiek buvo laimingų bilietų.
 console.log(loterijosBilietai);
 
 let kiekBilietu = 0;
@@ -282,7 +306,9 @@ for ( i = 0; i < loterijosBilietai.length; i++){
 
 console.log(kiekBilietu);
 
-//18. Sukurkite penktą skyrelį ir į jį sudėkite nuotraukas: ['šuo', 'katė', 'automobilis', 'namas', 'kiemas'] ir jas išrūšiuokite pagal žodžių ilgį taip, kad pirma eitų trumpiausi žodžiai;
+//18. Sukurkite penktą skyrelį ir į jį sudėkite nuotraukas:
+// ['šuo', 'katė', 'automobilis', 'namas', 'kiemas']
+// ir jas išrūšiuokite pagal žodžių ilgį taip, kad pirma eitų trumpiausi žodžiai;
 const nuotraukos = ['šuo', 'katė', 'automobilis', 'namas', 'kiemas'];
 uzduotis9.push(nuotraukos);
 console.log(uzduotis9);
