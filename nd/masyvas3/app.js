@@ -260,6 +260,15 @@ do {
 }while (pinigai500 !== 500 && pinigai500 < 501);
 
 console.log(pinigai500); */
+/*let sum = loterijosBilietai[1].reduce((total, current) => total + current);
+let randValue;
+while (sum < 500) {
+    randValue = rand(3,10);
+    sum += randValue;
+    loterijosBilietai[1].push(randValue);
+}
+console.log(sum);
+console.log(loterijosBilietai);*/
 
 //17.Patikrinti ar ką nors laimėjote. Bilieto numerius dalinkite iš 777 ir jeigu numeris išsidalins be liekanos - jūs laimėjote! Suskaičiuokite, kiek buvo laimingų bilietų.
 console.log(loterijosBilietai);
