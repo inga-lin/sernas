@@ -112,3 +112,46 @@ for (let i = 0; i < masyvas1.length; i++){
 }
 
 console.log(maziausiasIndeksas);
+console.log('----------');
+
+//3.Sugeneruokite masyvą, kurio reikšmės atsitiktinės
+// raidės A, B, C ir D, o ilgis 200. 
+//Suskaičiuokite kiek yra kiekvienos raidės.
+const raides = ['a', 'b', 'c', 'd'];
+const raidziuMasyvas = [];
+for (let i = 0; i < 200; i++ ){
+    raidziuMasyvas.push(raides[rand(0, raides.length - 1)]);
+}
+
+console.log(raidziuMasyvas);
+
+let a = 0;
+let b = 0;
+let c = 0;
+let d = 0;
+
+for (let i = 0; i < raidziuMasyvas.length; i++){
+    if ( raidziuMasyvas[i] === 'a'){
+        a++
+    } 
+    if ( raidziuMasyvas[i] === 'b'){
+        b++
+    }
+    if ( raidziuMasyvas[i] === 'c'){
+        c++
+    }
+    if ( raidziuMasyvas[i] === 'd'){
+        d++
+    }
+}
+
+console.log('a raidziu yra', a);
+console.log('b raidziu yra', b);
+console.log('c raidziu yra', c);
+console.log('d raidziu yra', d);
+
+//4.Sugeneruokite 3 masyvus pagal
+// 3 uždavinio sąlygą. Sudėkite masyvus,
+// sudėdami atitinkamas reikšmes. Paskaičiuokite 
+//kiek unikalių (po vieną, nesikartojančių) reikšmių ir 
+//kiek unikalių kombinacijų gavote.

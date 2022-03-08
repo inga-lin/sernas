@@ -127,6 +127,3 @@ hause2.forEach(floor => {
     });
 });
 
-// 2022-02-08
-const namoGyvenojai = ['vytas', 'lina', 'bebras'];
-console.log(namoGyvenojai);

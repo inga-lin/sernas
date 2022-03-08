@@ -45,26 +45,16 @@ namas1.gyventojai.forEach(element => console.log('3variantas ',element));
 //Tas objektas turi savybę number kuri yra 
 //atsitiktinis skaičius nuo 1 iki 6 DONE!
 
-//blogai padariau
-/*const skaiciai = {
-    number: []
-};
-
-for (let i = 0; i < 7; i++) {
-    skaiciai.number.push(rand(1, 6));
-}
-
-console.log(skaiciai.number);*/
 //destytojo
 const arr = [];
 for (let i = 0; i < 7; i++){
     const random = rand(1, 6);
     const obj = {}
-    obj.nmber = random;
+    obj.namber = random;
     arr.push(obj);
 }
 
-console.log(arr);
+console.log('3------',arr);
 
 //4uzdavinys Reikia sukurti masyvą iš 7 elementų. 
 //Masyvo elementas yra objektas. 
@@ -142,3 +132,37 @@ vetClinic.forEach(cat => murka1 =  cat.name === 'Murka' ? murka1 + 1 : murka1);
 
 console.log(vetClinic);
 console.log(murka1);
+
+
+//N.D
+console.log('n.d---------');
+const products = ['Dviratis', 'Triratis', 'Žvakidė', 'Stalas', 'Kėdė', 'Knygų lentyna', 'Paveikslas su rėmu', 'Veidrodis', 'Keturių vietų palapinė', 'Pripučiama valtis', 'Meškerė karosams gaudyti', 'Planšetė', 'Pastatoma lempa', 'Vazonas', 'Baterijų pakrovėjas', 'Pagalvių komplektas', 'Oro drėkintuvas', 'Oro sausintuvas', 'Kavinukas elektrinis', 'Kilimas 2 X 3 metrų', 'Kilimėlis kojoms valyti', 'Užuolaidos', 'Vėjo malūnas', 'Dažai sienoms', 'Dažai luboms', 'Medinė dėžė'];
+/*1.Sukurti 100 sąskaitų masyvą.
+
+Kiekviena sąskaita yra objektas ir turi po 5 savybes:
+number: pagal taisykle INV001, INV002, … INV099, INV100;
+
+products: masyvas random ilgio nuo 1 iki 10;
+products masyvo elementai objektai, turintys po 4 savybes:
+title: random iš products masyvo (vienoje sąskaitoje gali būti keli vienodi produktai. Vistiek jų kainos bus skirtingos); 
+price: random skaičius su kableliu nuo 1.00 iki 100.00; 
+amount: random skaičius nuo 1 iki 20;
+total:  price ir amount sandauga.
+
+total: visų products masyvo elementų total suma
+vat: 21% nuo total
+grandTotal: vat ir total suma*/
+/*
+const saskaituMasyvas = [];
+for (let i = 0; i < 100; i++){
+    const products1 = [];
+    for (let k = 0; k < 4; i++){
+        const random = rand(1, 10);
+        products1.push(random)
+    }
+    const products = {};
+    products.title = 
+}*/
+
+//console.log(saskaituMasyvas);
+

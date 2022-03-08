@@ -118,7 +118,15 @@ if ( karviuValtis <= 15 && katiniukuValtis <= 15){
 console.log('-----------');
 console.log('-----------');
 
-/*4)Antanas nusipirko naują butą ir pinigų jam liko nedaug. Dabar jis niekaip negali apsispręsti ką pirmiausiai pirkti: televizorių, skalbimo mašiną ar šaldytuvą. Todėl nusprendžia ridenti kauliuką (atsitiktinis skaičius nuo 1 iki 6) ir jeigu iškris 1 arba 5 pirkti televizorių, jeigu 3 arba 4 pirkti skalbimo mašiną ir jeigu 2 arba 6 - šaldytuvą. Padėkite Antanui apsispręsti. Ridenkite kauliuką ir parašykite atsakymą kokį daiktą jam pirkti.*/
+/*4)Antanas nusipirko naują butą ir pinigų jam liko nedaug.
+// Dabar jis niekaip negali apsispręsti ką pirmiausiai
+// pirkti: televizorių, skalbimo mašiną ar šaldytuvą. 
+//Todėl nusprendžia ridenti kauliuką 
+//(atsitiktinis skaičius nuo 1 iki 6) ir jeigu iškris
+// 1 arba 5 pirkti televizorių, jeigu 3 arba 4 pirkti 
+//skalbimo mašiną ir jeigu 2 arba 6 - šaldytuvą.
+// Padėkite Antanui apsispręsti. Ridenkite kauliuką 
+//ir parašykite atsakymą kokį daiktą jam pirkti.*/
 const pirkiniai = rand(1, 6);
 console.log(pirkiniai);
 
