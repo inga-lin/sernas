@@ -56,6 +56,8 @@ console.log('Bebras:', namas2[2][0]);
 console.table(namas2);
 console.log('namo aukštis: ', namas2.length);
 
+//Sukurti naują masyvą, 11 aukštų, 
+//kurio elementai atsitiktiniai skaičiai nuo 5 iki 25 DONE!
 const hause1 = [];
 for (let i = 0; i < 11; i++) {
     hause1.push(rand(5, 25));
@@ -63,7 +65,8 @@ for (let i = 0; i < 11; i++) {
 
 
 console.log('---------');
-
+//sukurti masyva is 11element, kiekvienas elementas yra masyvas 
+//is dvieju elementu- atsitiktiniu skaiciu nuo 5 iki 25.
  /*destytojo*/
  const hause2 = [];
  for (let i = 0; i < 11; i++) {
@@ -81,7 +84,8 @@ console.table(hause2);
 
 console.log('---------');
 console.log('---------');
-//3.Imame vokišką hause1 ir naudodami for o poto forEach nuskaitome, kiekvieną narį atskirai išspauszdindami consolėje DONE!
+//3.Imame vokišką hause1 ir naudodami for o poto forEach nuskaitome, 
+//kiekvieną narį atskirai išspauszdindami consolėje DONE!
 
 for (let i = 0; i < hause1.length; i++){
     console.log(hause1[i]); // visus aukstus isspauzdins atskitoje eiluteje
@@ -98,6 +102,10 @@ hause1.forEach(el => {
 });
 
 //hause1.forEach(el => console.log(el)); trumpiausias variantas
+
+//4.Imame vokišką hause2 ir naudodami for 
+//o poto forEach nuskaitome, kiekvieną narį atskirai
+// išspauszdindami consolėje DONE!
 let hause222 = [];
 
 for (let i = 0; i < hause2.length; i++){
@@ -109,8 +117,12 @@ for (let i = 0; i < hause2.length; i++){
 }
 //antras variantas
 console.log('-----');
+// lipame per aukstus
 hause2.forEach(floor => {
-    floor.forEach(flat => {;
+    // gauname auksta
+    // tada lipame per aukstus
+    floor.forEach(flat => {
+    // gauname butus
     console.log(flat);
     });
 });
