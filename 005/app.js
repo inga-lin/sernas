@@ -144,7 +144,8 @@ number: pagal taisykle INV001, INV002, … INV099, INV100;
 
 products: masyvas random ilgio nuo 1 iki 10;
 products masyvo elementai objektai, turintys po 4 savybes:
-title: random iš products masyvo (vienoje sąskaitoje gali būti keli vienodi produktai. Vistiek jų kainos bus skirtingos); 
+title: random iš products masyvo (vienoje sąskaitoje gali
+ būti keli vienodi produktai. Vistiek jų kainos bus skirtingos); 
 price: random skaičius su kableliu nuo 1.00 iki 100.00; 
 amount: random skaičius nuo 1 iki 20;
 total:  price ir amount sandauga.
@@ -165,4 +166,23 @@ for (let i = 0; i < 100; i++){
 }*/
 
 //console.log(saskaituMasyvas);
+/*const saskaitos = [];
+for (let i = 0; i < 100; i++){
+    const masyvas = [];
+   for (let i = 0; i < 5; i++){
+       
 
+   }
+    number.push(i);
+    const obje = {};
+    
+}
+
+
+console.log(saskaitos);
+const saskaita = {};
+saskaita.number = number.length */
+const saskaita = {};
+saskaita.number = 10;
+saskaita.products = {};
+saskaita.products.title = saskaita[rand(0, products.length)];
