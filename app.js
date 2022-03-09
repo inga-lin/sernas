@@ -58,7 +58,7 @@ console.log(sum3);
 console.log('-----------');
 console.log('-----------');
 
-/*N.D*/
+/*Namu.Darbai*/
 /* 1)Programiškai ridenkite du žaidimo kauliukus- sugeneruokite du atsitiktinius skaičius nuo 1 iki 6 Jeigu kauliukų suma didesnė nei 8 jūs laimėjote, priešingu atveju pralošėte. Išveskite atsakymą, kuriame būtų abiejų kauliukų reikšmės ir išvada laimėjote ar pralošėte. */
 function rand(min, max) { 
     min = Math.ceil(min);
