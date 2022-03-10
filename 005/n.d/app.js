@@ -57,6 +57,20 @@ for (let i = 0; i < products.length; i++){
     console.log(products[i] + ' ' + kiekis + ' ' + (suma * kiekis));
 }
 
+//DEDAM I LENTYNAS
+localStorage.setItem('Mano lentyna111', JSON.stringify(saskaitos));
+//BANDOM PASIIMTI IS LENTYNU
+console.log(JSON.parse(localStorage.getItem('Mano lentyna111')));
+
+//DEDAM I LENTYNAS
+localStorage.setItem('Mano1', JSON.stringify(products));
+//BANDOM PASIIMTI IS LENTYNU
+console.log(JSON.parse(localStorage.getItem('Mano1')));
+
+//DEDAM I LENTYNAS
+localStorage.setItem('Mano2', JSON.stringify(grandTotal));
+//BANDOM PASIIMTI IS LENTYNU
+console.log(JSON.parse(localStorage.getItem('Mano2')));
 
 /*Duomenų struktūros
 
