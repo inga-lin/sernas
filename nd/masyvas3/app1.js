@@ -155,3 +155,106 @@ console.log('d raidziu yra', d);
 // sudėdami atitinkamas reikšmes. Paskaičiuokite 
 //kiek unikalių (po vieną, nesikartojančių) reikšmių ir 
 //kiek unikalių kombinacijų gavote.
+
+
+const raides1 = ['a', 'b', 'c', 'd'];
+const raidziuMasyvas1 = [];
+const raidziuMasyvas2 = [];
+const raidziuMasyvas3 = [];
+for (let i = 0; i < 200; i++ ){
+    raidziuMasyvas1.push(raides1[rand(0, raides1.length - 1)]);
+    raidziuMasyvas2.push(raides1[rand(0, raides1.length - 1)]);
+    raidziuMasyvas3.push(raides1[rand(0, raides1.length - 1)]);
+}
+
+console.log(raidziuMasyvas1);
+console.log(raidziuMasyvas2);
+console.log(raidziuMasyvas2);
+
+const raidziuMiksas = [];
+for (let i = 0; i < raidziuMasyvas1.length; i++){
+    raidziuMiksas.push(raidziuMasyvas1[i] + raidziuMasyvas2[i] + raidziuMasyvas3[i]);
+
+}
+
+console.log(raidziuMiksas);
+
+const kombinacijos = [];
+for (let i = 0; i < raidziuMiksas.length; i++){
+    if (!kombinacijos.includes(raidziuMiksas[i])){
+        kombinacijos.push(raidziuMiksas[i]);
+    }
+    
+}
+
+console.log(kombinacijos);
+console.log(kombinacijos.length);
+
+//5.Sugeneruokite du masyvus, kurių reikšmės yra 
+//atsitiktiniai skaičiai nuo 100 iki 999. 
+//Masyvų ilgiai 100. Masyvų reikšmės turi būti
+// unikalios savo masyve (t.y. neturi kartotis).
+
+const masyvas11 = [];
+const masyvas22 = [];
+
+do {
+    const mas11 = rand(100, 999);
+    const mas22 = rand(100, 999);
+    if (masyvas11.length !== 100 && !masyvas11.includes(mas11)){
+        masyvas11.push(mas11)
+    }
+    if (masyvas22.length !== 100 && !masyvas22.includes(mas22)){
+        masyvas22.push(mas22)
+    }
+} while ( masyvas11.length < 100 || masyvas22.length < 100);
+
+console.log(masyvas11);
+console.log(masyvas22);
+
+//6.Sugeneruokite masyvą, kuris būtų sudarytas iš reikšmių, 
+//kurios yra pirmame 5 uždavinio masyve, bet nėra antrame
+// 5 uždavinio masyve.
+console.log('------------');
+const masyvas33 = [];
+for (let i = 0; i < masyvas11.length; i++){
+    if (!masyvas22.includes(masyvas11[i])){
+        masyvas33.push(masyvas11[i]);
+    }
+}
+
+console.log(masyvas33);
+
+//7.7.	Sugeneruokite masyvą iš elementų, kurie kartojasi
+// abiejuose 5 uždavinio masyvuose.
+
+const masyvas44 = [];
+for (let i = 0; i < masyvas11.length; i++){
+    if (masyvas22.includes(masyvas11[i]) && !masyvas44.includes(masyvas11[i])){
+        masyvas44.push(masyvas11[i]);
+    }
+}
+console.log('------------');
+console.log(masyvas44);
+
+//8.8.	Sugeneruokite masyvą, kurio indeksus sudarytų pirmo 5 uždavinio masyvo 
+//reikšmės, o jo reikšmės iš būtų antrojo masyvo.
+
+//9.	Sugeneruokite 10 skaičių masyvą pagal taisyklę:
+// Du pirmi skaičiai- atsitiktiniai nuo 5 iki 25. 
+//Trečias, pirmo ir antro suma. Ketvirtas- antro ir trečio suma. 
+//Penktas trečio ir ketvirto suma ir t.t.
+
+const masyvas55 = [];
+const skaicius22 = rand(5, 25);
+const skaicius33 = rand(5, 25);
+masyvas55.push(skaicius22);
+masyvas55.push(skaicius33);
+
+for (let i = 2; i < 10; i++){
+    masyvas55.push(masyvas55[i-2] + masyvas55[i-1]);
+    
+}
+
+
+console.log(masyvas55);
