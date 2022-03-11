@@ -7,11 +7,16 @@ function rand(min, max) {
 
 const balls = [];
 
-for (let i = 0; i < 7; i++){
+apskritimukas = {};
+apskritimukas.color = ;
+apskritimukas.number = ;
+balls.push(apskritimukas);
+
+/*for (let i = 0; i < 7; i++){
     const random = rand(1, 6);
     const obj = {}
     obj.namber = random;
     balls.push(obj);
 }
 
-console.log('3------',balls);
+console.log('3------',balls);*/
