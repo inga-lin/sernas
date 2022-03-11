@@ -167,28 +167,28 @@ for (let i = 0; i < 200; i++ ){
     raidziuMasyvas3.push(raides1[rand(0, raides1.length - 1)]);
 }
 
-console.log(raidziuMasyvas1);
-console.log(raidziuMasyvas2);
-console.log(raidziuMasyvas2);
+console.log('raidziuMasyvas1',raidziuMasyvas1);
+console.log('raidziuMasyvas2',raidziuMasyvas2);
+console.log('raidziuMasyvas3',raidziuMasyvas2);
 
 const raidziuMiksas = [];
 for (let i = 0; i < raidziuMasyvas1.length; i++){
-    raidziuMiksas.push(raidziuMasyvas1[i] + raidziuMasyvas2[i] + raidziuMasyvas3[i]);
+    raidziuMiksas.push(raidziuMasyvas1[i] + raidziuMasyvas2[i] + raidziuMasyvas3[i]); //sudedam masyvo narius 0+0+0,1+1+1,2+2+2...
 
 }
 
-console.log(raidziuMiksas);
+console.log('raidziuMiksas', raidziuMiksas);
 
 const kombinacijos = [];
 for (let i = 0; i < raidziuMiksas.length; i++){
-    if (!kombinacijos.includes(raidziuMiksas[i])){
+    if (!kombinacijos.includes(raidziuMiksas[i])){ ////////////
         kombinacijos.push(raidziuMiksas[i]);
     }
     
 }
 
-console.log(kombinacijos);
-console.log(kombinacijos.length);
+console.log('unikalios reiksmes',kombinacijos);//kiek unikalių (po vieną, nesikartojančių) reikšmių
+console.log('kiek unikaliu reiksmiu gavom:',kombinacijos.length);//kiek unikalių kombinacijų gavote.
 
 //5.Sugeneruokite du masyvus, kurių reikšmės yra 
 //atsitiktiniai skaičiai nuo 100 iki 999. 
@@ -207,7 +207,7 @@ do {
     if (masyvas22.length !== 100 && !masyvas22.includes(mas22)){
         masyvas22.push(mas22)
     }
-} while ( masyvas11.length < 100 || masyvas22.length < 100);
+} while ( masyvas11.length < 100 || masyvas22.length < 100);//1.darysim tol kol masyvas11 ilgis bus mazesnis uz 100. ir masyvo22 ilgis bus mazesnis uz 100
 
 console.log(masyvas11);
 console.log(masyvas22);
@@ -225,7 +225,7 @@ for (let i = 0; i < masyvas11.length; i++){
 
 console.log(masyvas33);
 
-//7.7.	Sugeneruokite masyvą iš elementų, kurie kartojasi
+//7.	Sugeneruokite masyvą iš elementų, kurie kartojasi
 // abiejuose 5 uždavinio masyvuose.
 
 const masyvas44 = [];
