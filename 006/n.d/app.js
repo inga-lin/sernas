@@ -38,47 +38,6 @@ button.addEventListener('click' , () =>{
     localStorage.setItem('Apskritimai1', JSON.stringify(balls));
     console.log(JSON.parse(localStorage.getItem('Apskritimai1')));
 })
-/*
-let gameCounter = localStorage.getItem('gameSave');
-if ( gameCounter === null){
-    localStorage.getItem('gameSave', numeris);
-    gameCounter = numeris;
-}
-const button = document.querySelector('#naujas');
-const newBall = document.createElement('div');
-const h1 = document.querySelector('h1');
-button.addEventListener('click' , () =>{
-    gameCounter++;
-    h1.innerText = gameCounter;
-    localStorage.setItem('gameSave', gameCounter )
-})
-*/
 
 console.log(JSON.parse(localStorage.getItem('Apskritimai1')));
 console.log('=====');
-
-/*let gameCounter = localStorage.getItem('gameSave');
-if ( gameCounter === null){
-    localStorage.getItem('gameSave1', 0);
-    gameCounter = 0;
-}
-
-const skaicius = document.querySelector('#skaicius');
-const naujas = document.querySelector('#naujas');
-
-skaicius.innerText = gameCounter;
-naujas.addEventListener('click' , () =>{
-    gameCounter++;
-    skaicius.innerText = gameCounter;
-    localStorage.setItem('gameSave1', gameCounter )
-})
-istrinti.style.backraundcolor = 'brown'
-backraundcolor*/
-/*for (let i = 0; i < 7; i++){
-    const random = rand(1, 6);
-    const obj = {}
-    obj.namber = random;
-    balls.push(obj);
-}
-
-console.log('3------',balls);*/
