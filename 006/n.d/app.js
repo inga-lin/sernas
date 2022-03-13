@@ -9,35 +9,31 @@ const numeris = document.querySelector(`#skaicius`);
 const spalva = document.querySelector(`#spalva`);
 const button = document.querySelector('#naujas');
 const istrinti = document.querySelector('#istrinti');
-
+const apskritimai = document.querySelector('#apskritimai');
 const balls = [];
 
-function apskritimas(color, number){
-    /*apskritimukas = {};
-    apskritimukas.color = color ;
-    apskritimukas.number = number;
-    balls.push(apskritimukas);*/
-}
-
-
 button.addEventListener('click' , () =>{
-    const apskritimukas = {};//
-   // apskritimukas.color = color ;//
-    apskritimukas.number = number;//
-    balls.push(apskritimukas);//
-    console.log(spalva.value);
-    apskritimas(spalva.value, numeris.value);
-    //
-    let kodas2 = document.querySelector('#apskritimai');
-    const div = document.createElement('div');//
-    kodas2.appendChild(div);
-    kodas2.innerHTML = document.createTextNode(numeris);
-    const skaiciai = document.createTextNode(number);
-    div.appendChild(skaiciai);
+   const obj = {};
+   const color = spalva.value;
+   obj.color = color;
+   const number = numeris.value;
+   obj.number = number;
+   balls.push(obj);
+
+   const naujas = document.createElement("div");
+   const naujas1 = document.createTextNode(number);
+   naujas.style.backgroundColor = color;
+   naujas.appendChild(naujas1);
+   apskritimai.appendChild(naujas); //apskritimuose sukuriam
+   // vis nauja div su numeriu ir spalva
+
+
+    
     //
     localStorage.setItem('Apskritimai1', JSON.stringify(balls));
-    console.log(JSON.parse(localStorage.getItem('Apskritimai1')));
+    //console.log(JSON.parse(localStorage.getItem('Apskritimai1')));
 })
 
 console.log(JSON.parse(localStorage.getItem('Apskritimai1')));
 console.log('=====');
+
