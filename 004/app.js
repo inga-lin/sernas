@@ -4,42 +4,6 @@ function rand(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
-/*
-const namas1 = ['Vytas', 'Aiste', 'bebras'];
-console.log(namas1);
-console.log('namo aukstis', namas1.length);
-
-//Sukurti naują masyvą, 11 aukštų, kurio elementai atsitiktiniai skaičiai nuo 5 iki 25 DONE!
-
-const namas2 = [];
-for (let i = 0; i < 11; i++){
-    namas2.push(rand(5, 25));
-}
-console.log(namas2);
-
-const namas12 = ['lina', 'Alina', 'zirafa'];
-const namas22 = [
-    ['vytas', 'linaaa'],
-    ['Aiste', 'Alina'],
-    ['Bebras' ,'zirafa']
-];
-console.log(namas22);
-console.log(namas22[2][0]);
-
-//sukurti masyva is 11element, kiekvienas elementas yra masyvas is dvieju elementu- atsitiktiniu skaiciu nuo 5 iki 25.
- const namas33 = [];
- for (let i = 0; i < 11; i++){
-     
-    const floor = []; //tuscias aukstas is 2
-    for (let k = 0; k < 2; k++ ){
-        floor.push(rand(5, 25));
-    }
-    namas33.push(floor);
- }
-
- console.log(namas33);
- console.log(namas33[2][0]);
-*/
 
 const namas1 = ['Vytas', 'Aiste', 'Bebras'];
 

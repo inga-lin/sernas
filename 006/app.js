@@ -70,7 +70,7 @@ const zebrai = {
 localStorage.setItem('Mano zebrai', JSON.stringify(zebrai));//matom application
 console.log(JSON.parse(localStorage.getItem('Mano zebrai')));//matom consoleje
 
-//pvz kam taip dedam buuton
+//pvz kam taip dedam buuton zaidimas su issaugotais skaiciais
 let gameCounter = localStorage.getItem('gameSave');
 if ( gameCounter === null){
     localStorage.getItem('gameSave', 0);
