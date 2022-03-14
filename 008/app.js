@@ -108,7 +108,8 @@ class KauliukoMetimas {
         this.rezultatas = this.rand(1,6);
         
     }
-    //jei virsuje neturim sito tai reik ji cia isideti ir cia (virsuje prie this.rezultatas = ) this. prideti (= this.rand(1,6);)
+    //jei virsuje neturim sito tai reik ji cia isideti ir cia
+    // (virsuje prie this.rezultatas = ) this. prideti (= this.rand(1,6);)
     rand(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
