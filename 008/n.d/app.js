@@ -35,16 +35,12 @@ class Kibiras1 {
 }
 
 const kibiras = new Kibiras1(5);
-console.log(kibiras.akmenuKiekis);
-
+//console.log(kibiras.akmenuKiekis);
 kibiras.prideti1Akmeni();
-console.log(kibiras.akmenuKiekis);
-
+//console.log(kibiras.akmenuKiekis);
 kibiras.pridetiDaugAkmenu(15);
-console.log(kibiras.akmenuKiekis);
-
-
-console.log(kibiras.kiekPririnktaAkmenu());
+//console.log(kibiras.akmenuKiekis);
+console.log('Is viso pririnkta akmenu:',kibiras.kiekPririnktaAkmenu());
 
 
 
@@ -78,19 +74,19 @@ class Pinigine {
     }
     skaiciuoti(){
         this.suma = this.popieriniaiPinigai + this.metaliniaiPinigai;
+        return this.suma
     }
 
     
 }
 
 const pinigai = new Pinigine(10,5);
-console.log(pinigai);
-
+//console.log(pinigai);
 pinigai.ideti(3);
-console.log(pinigai);
-
-pinigai.skaiciuoti(3);
-console.log(pinigai);
+//console.log(pinigai);
+pinigai.skaiciuoti();
+//console.log(pinigai);
+console.log('visa pinigu suma:',pinigai.skaiciuoti());
 
 /*3.Sukurti klasę Troleibusas. Konstruktoriuje sukurti savybę 
 keleiviuSkaicius kuri yra lygi 0. Parašyti du metodus: 
@@ -103,6 +99,8 @@ class Troleibusas {
     constructor(kiekis){
         this.keleiviuSkaicius = kiekis;
     } 
+
+    
     ilipa(keleiviuSkaicius){
         this.keleiviuSkaicius = this.keleiviuSkaicius + keleiviuSkaicius;
     }
@@ -113,6 +111,8 @@ class Troleibusas {
             
             console.log('troleibusu važiuoti neigiamas keleivių skaičius negali');
             
+        } else {
+            console.log('autobuse vaziuoja',keleiviai.vaziuoja());
         }
     }
 
@@ -122,17 +122,18 @@ class Troleibusas {
 }
 
 const keleiviai = new Troleibusas (5);
-console.log((keleiviai));
-
+//console.log((keleiviai));
 keleiviai.ilipa(5);
-console.log(keleiviai);
-
-keleiviai.islipa(11);
-console.log(keleiviai);
-
+//console.log(keleiviai);
+keleiviai.islipa(3);
+//console.log(keleiviai);
 keleiviai.vaziuoja();
-console.log(keleiviai);
-console.log('autobuse vaziuoja',keleiviai.vaziuoja());
+//console.log(keleiviai);
+//console.log('autobuse vaziuoja',keleiviai.vaziuoja());
+
+
+
+
 /*4.(STATIC) Sukurti metodą keleiviuSkaiciusVisuoseTroleibusuose(), 
 kuris rodytų bendrą keleivių skaičių visuose Troleibusas objektuose. 
 Bendram kelevių skaičiaus skaičiavimui sukurkite statinį metodą 
@@ -149,8 +150,8 @@ metodą krepselioTurinys(), kuris į konsolę išvestų produktų sąrašą
 tokiu atveju produktų kiekis turėtų sumuotis.*/
 
 class PirkiniuKrepselis{
-    constructor (){
-        this.turinys =
+    constructor (k){
+        this.turinys = k;
     }
 }
 
