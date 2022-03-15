@@ -92,6 +92,17 @@ for(const what in meska){
     console.log('----',what);// ismes tik type ir sleep
 }*/
 
+/* namu darbai destytoojo
+Objektiniai uždaviniai
+
+1.Sukurti klasę Kibiras1. Konstruktoriuje sukurti
+savybę akmenuKiekis  kuri lygi 0. Parašyti 
+šiai klasei metodus, pridedančius akmenis: 
+prideti1Akmeni() pridetiDaugAkmenu(kiekis) ir
+metodą išvedantį akmenų kiekį į konsolę- kiekPririnktaAkmenu().
+Sukurti vieną kibiro objektą ir pademonstruoti akmenų rinkimą
+į kibirą ir rezultatų išvedimą.*/
+
 class Kibiras1 {
     constructor (){
         this.akmenuKiekis = 0;
@@ -126,3 +137,44 @@ k1.kiekPririnktaAkmenu();// cia atspauzdins kiek ju is viso turim
 k1.prideti1Akmeni();//cia idedam 1akmeni
 
 k1.kiekPririnktaAkmenu();// cia atspauzdins kiek ju is viso turim
+
+
+
+
+class Pinigine {
+    constructor(popieriniaiPinigai, metaliniaiPinigai){
+        this.popieriniaiPinigai = popieriniaiPinigai;
+        this.metaliniaiPinigai = metaliniaiPinigai;
+    }
+    ideti(kiekis){
+        this.idetiPinigai = kiekis;
+        
+
+        
+        if (this.idetiPinigai < 2 ){
+            this.metaliniaiPinigai += this.idetiPinigai ;
+        }
+        else if (this.idetiPinigai > 2 ){
+            this.popieriniaiPinigai = this.popieriniaiPinigai + kiekis;
+        }
+    
+    }
+    skaiciuoti(){
+        this.suma = this.popieriniaiPinigai + this.metaliniaiPinigai;
+        return this.suma
+    }
+
+    
+}
+
+const pinigai = new Pinigine(10,5);
+//console.log(pinigai);
+pinigai.ideti(3);
+//console.log(pinigai);
+pinigai.skaiciuoti();
+//console.log(pinigai);
+console.log('visa pinigu suma:',pinigai.skaiciuoti());
+
+
+
+

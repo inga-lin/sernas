@@ -55,38 +55,59 @@ veikimą. Nesvarbu kokios popierinės kupiūros ir metalinės monetos
 egzistuoja realiame pasaulyje.*/
 
 class Pinigine {
-    constructor(popieriniaiPinigai, metaliniaiPinigai){
-        this.popieriniaiPinigai = popieriniaiPinigai;
-        this.metaliniaiPinigai = metaliniaiPinigai;
+    constructor(){
+        this.popieriniaiPinigai = 0;
+        this.metaliniaiPinigai = 0;
+        this.monetoss = 0;//6uzdavinys
+        this.banknotaii = 0;//6uzdavinys
     }
     ideti(kiekis){
         this.idetiPinigai = kiekis;
         
-
-        
         if (this.idetiPinigai < 2 ){
-            this.metaliniaiPinigai += this.idetiPinigai ;
+            this.metaliniaiPinigai += this.idetiPinigai;
+            this.monetos();//6uzdavinys
+
         }
         else if (this.idetiPinigai > 2 ){
             this.popieriniaiPinigai = this.popieriniaiPinigai + kiekis;
+            this.banknotai();//6uzdavinys
         }
     
     }
+ 
     skaiciuoti(){
-        this.suma = this.popieriniaiPinigai + this.metaliniaiPinigai;
-        return this.suma
+        console.log('is viso tiek pinigu:', this.popieriniaiPinigai + this.metaliniaiPinigai);
+        console.log('tiek monetu:', this.monetoss); 
+        console.log('tiek banknotu:', this.banknotaii); 
+        //return this.suma
+    }
+    
+    monetos(){
+        this.monetoss++;//6uzdavinys
+        
+    }
+
+    banknotai(){
+        this.banknotaii++; //6uzdavinys
+
     }
 
     
 }
 
-const pinigai = new Pinigine(10,5);
+const pinigai = new Pinigine();
 //console.log(pinigai);
+pinigai.ideti(1);
+console.log(pinigai);
 pinigai.ideti(3);
-//console.log(pinigai);
+console.log(pinigai);
+pinigai.ideti(5);
+console.log(pinigai);
 pinigai.skaiciuoti();
-//console.log(pinigai);
-console.log('visa pinigu suma:',pinigai.skaiciuoti());
+console.log(pinigai);
+//console.log('visa pinigu suma:',pinigai.skaiciuoti());
+
 
 /*3.Sukurti klasę Troleibusas. Konstruktoriuje sukurti savybę 
 keleiviuSkaicius kuri yra lygi 0. Parašyti du metodus: 
@@ -178,6 +199,32 @@ Sukurti metodą stiklinejeYra(), kuris į konsolę atspausdintų kiek stiklinėj
 yra skysčio. Sukurti tris stiklinės objektus su tūriais: 200, 150, 100. 
 Didžiausią pripilti pilną ir tada ją ispilti į mažesnę stiklinę, o mažesnę 
 į dar mažesnę.*/
+
+class Stikline {
+    constructor (){
+        this.turis = 0;
+        this.kiekis = 0;
+    }
+    ipilti(kiekis){
+        if ()
+    }
+
+    ispilti(){
+
+    }
+
+    stiklinejeYra(){
+
+    }
+}
+
+const stik = new Stikline();
+stik.ipilti(10);
+console.log(stik);
+stik.ispilti();
+console.log(stik);
+stik.stiklinejeYra();
+console.log(stik);
 
 /*9.Sukurti klasę Grybas. Sukurti klasę Krepsys. Krepsys turi savybę 
 dydis,kuriai konstruktoriuje yra priskiriama reikšmė 500 ir savybę 
