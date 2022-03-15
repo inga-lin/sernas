@@ -201,19 +201,26 @@ Didžiausią pripilti pilną ir tada ją ispilti į mažesnę stiklinę, o maže
 į dar mažesnę.*/
 
 class Stikline {
-    constructor (){
-        this.turis = 0;
+    constructor (vanduo){
+        this.turis = vanduo;
         this.kiekis = 0;
     }
+
     ipilti(kiekis){
-        if ()
+        if (this.turis < kiekis){
+            this.kiekis = this.turis;
+        } else {
+            this.kiekis = kiekis;
+        }
     }
 
     ispilti(){
-
+        if (this.turis < this.kiekis){
+            this.kiekis = this.turis;
+        } 
     }
 
-    stiklinejeYra(){
+    stiklinejeYra(stiklinejeYraa){
 
     }
 }
