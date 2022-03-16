@@ -155,7 +155,7 @@ class Zveris {
 const z1 = new Zveris('lape');//1
 const z2 = new Zveris('baubas');//1
 const z3 = new Zveris('triusis');//1
-
-Zveris.naujasZveris('bebras');//2
-console.log(z3);
+const z4 = new Zveris('pupa')
+//Zveris.naujasZveris('bebras');//2
+console.log(z4);
 console.log(Zveris.miskas);//1
