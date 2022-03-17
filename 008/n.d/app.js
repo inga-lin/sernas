@@ -117,6 +117,10 @@ važiuojančių keleivių skaičių. Atkreipkite dėmesį, kad troleibusu
 važiuoti neigiamas keleivių skaičius negali.*/
 
 class Troleibusas {
+
+    static bendrasKeleiviuSkaicius(keleiviuSkaicius){
+        
+    }
     constructor(kiekis){
         this.keleiviuSkaicius = kiekis;
     } 
@@ -140,6 +144,8 @@ class Troleibusas {
     vaziuoja(){
         return this.keleiviuSkaicius;
     }
+
+    keleiviuSkaiciusVisuoseTroleibusuose()
 }
 
 const keleiviai = new Troleibusas (5);
@@ -162,6 +168,8 @@ bendrasKeleiviuSkaicius(keleiviuSkaicius), kuris pridėtų arba atimtų
 keleivius iš statinės savybės visiKeleiviai (kurioje yra įrašytas 
 bendras keleivių skaičius). Taip pat atitinkamai modifikuokite metodus 
 ilipa(keleiviuSkaicius) ir islipa(keleiviuSkaicius).*/
+
+
 
 /*5.(MAP) Sukurti klasę PirkiniuKrepselis. Konstruktoriuje sukurti 
 savybę turinys, kuri yra Map tipo objektas. Sukurti tris metodus: 

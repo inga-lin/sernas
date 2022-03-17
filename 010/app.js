@@ -61,12 +61,12 @@ class Anukas {
 
 
     
-    isleisti(){ //objektinis metodas
-        if (this.pinigai >= 1000){
-            this.pinigai = this.pinigai - 1000;
-            console.log('nusipirkau');
+    isleisti(){ //objektinis metodas 3
+        if (this.pinigai >= 1000){//3
+            this.pinigai = this.pinigai - 1000;//3
+            console.log('nusipirkau');//3
         } else {
-            console.log('pinigu nera');
+            console.log('pinigu nera'); //3
         }
     }
     rand(min, max) {//2
