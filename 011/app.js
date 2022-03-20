@@ -39,7 +39,7 @@ const arr = ['Krokodilas', 'Gena'];
 
 //kur galim ji skirstyti? tarkim i funkcija
 const b = (a,b) => {
-    console.log('a:', a, 'b:', b);
+    console.log('cia', 'a:', a, 'b:', b);
 }
 
 b(7,8);//a: 7 b: 8
@@ -47,7 +47,7 @@ b(arr);//a: (2) ['Krokodilas', 'Gena']0: "Krokodilas"1: "Gena"length: 2[[Protot
 b(...arr);//jis paskirste a: Krokodilas b: Gena
 
 const arr2 = [arr];
-console.log(arr2);//0: (2) ['Krokodilas', 'Gena']
+console.log('-----',arr2);//0: (2) ['Krokodilas', 'Gena']
 
 const arr3 = [...arr];
 console.log(arr3);// ['Krokodilas', 'Gena'] 
@@ -61,10 +61,10 @@ console.log(Array(33));
 //MAP -grazina arejaus kopija
 
 const arrCopy = arr.map(value => { //value cia bus krokodilas ir gena
-    return value + 'kulverstukas';
+    return value + ' kulverstukas';
 });
 
-console.log(arrCopy);
+console.log('map',arrCopy);
 
 const arrCopy1 = [...Array(33)].map(value => { //value cia bus krokodilas ir gena
     return 'kulverstukas';

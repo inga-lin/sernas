@@ -15,6 +15,8 @@ Sukurti vieną kibiro objektą ir pademonstruoti akmenų rinkimą
 į kibirą ir rezultatų išvedimą.*/
 
 class Kibiras1 {
+
+    static akmenuSkaiciusVisuoseKibiruose(){}
     constructor (kiekis){
         this.akmenuKiekis = kiekis;
         
@@ -116,28 +118,31 @@ parašyti metoda vaziuoja(), kuris į konsolę išvestų troleibusu
 važiuojančių keleivių skaičių. Atkreipkite dėmesį, kad troleibusu 
 važiuoti neigiamas keleivių skaičius negali.*/
 
-class Troleibusas {
 
-    static bendrasKeleiviuSkaicius(keleiviuSkaicius){
-        
+class Troleibusas {
+    static visiKeleiviai = 0;//4
+    static bendrasKeleiviuSkaicius(keleiviuSkaicius){//4
+        this.visiKeleiviai += keleiviuSkaicius;
     }
-    constructor(kiekis){
-        this.keleiviuSkaicius = kiekis;
+    constructor(){
+        this.keleiviuSkaicius = 0;
     } 
 
     
     ilipa(keleiviuSkaicius){
         this.keleiviuSkaicius = this.keleiviuSkaicius + keleiviuSkaicius;
+        Troleibusas.bendrasKeleiviuSkaicius(keleiviuSkaicius);//4
     }
 
     islipa(keleiviuSkaicius){
         this.keleiviuSkaicius = this.keleiviuSkaicius - keleiviuSkaicius;
         if (this.keleiviuSkaicius < 0 ){
-            
+            this.constructor.visiKeleiviai(-this.keleiviuSkaicius);//4
             console.log('troleibusu važiuoti neigiamas keleivių skaičius negali');
             
         } else {
             console.log('autobuse vaziuoja',keleiviai.vaziuoja());
+            this.constructor.visiKeleiviai -= keleiviuSkaicius; //4
         }
     }
 
@@ -145,19 +150,24 @@ class Troleibusas {
         return this.keleiviuSkaicius;
     }
 
-    keleiviuSkaiciusVisuoseTroleibusuose()
+    keleiviuSkaiciusVisuoseTroleibusuose(){
+        console.log('bendras Keleiviu Skaicius',this.constructor.visiKeleiviai);
+    }
 }
 
-const keleiviai = new Troleibusas (5);
+const keleiviai = new Troleibusas ();
+const keleiviai1 = new Troleibusas ();//4
+
 //console.log((keleiviai));
-keleiviai.ilipa(5);
+keleiviai.ilipa(20);
+keleiviai1.ilipa(5);
 //console.log(keleiviai);
-keleiviai.islipa(3);
+keleiviai.islipa(5);
 //console.log(keleiviai);
 keleiviai.vaziuoja();
+keleiviai.keleiviuSkaiciusVisuoseTroleibusuose();//4
 //console.log(keleiviai);
 //console.log('autobuse vaziuoja',keleiviai.vaziuoja());
-
 
 
 
@@ -176,19 +186,45 @@ savybę turinys, kuri yra Map tipo objektas. Sukurti tris metodus:
 idetiSureli(kiekis), idetiPieno(kiekis), idetiDuonos(kiekis). Parašyti 
 metodą krepselioTurinys(), kuris į konsolę išvestų produktų sąrašą 
 (turinys kintamąjį). Pridėti tuos pačius produktus galima po kelis kartus, 
-tokiu atveju produktų kiekis turėtų sumuotis.*/
+tokiu atveju produktų kiekis turėtų sumuotis.+*/
 
 class PirkiniuKrepselis{
-    constructor (k){
-        this.turinys = k;
+    constructor (){
+        this.turinys = new Map();
+        this.turinys.set('surelis', 0);
+        this.turinys.set('pienas', 0);
+        this.turinys.set('duona', 0);
+    }
+
+    idetiSureli(kiekis){
+        this.turinys.set('surelis', this.turinys.get('surelis') + kiekis);
+    }
+
+    idetiPieno(kiekis){
+        this.turinys.set('pienas', this.turinys.get('pienas') + kiekis);
+    }
+
+    idetiDuonos(kiekis){
+        this.turinys.set('duona', this.turinys.get('duona') + kiekis);
+    }
+
+    krepselioTurinys(){
+        console.log(this.turinys);
     }
 }
+
+const pirkiniai = new PirkiniuKrepselis();
+pirkiniai.idetiSureli(10);
+pirkiniai.idetiSureli(30);
+pirkiniai.idetiPieno(20);
+pirkiniai.idetiDuonos(10);
+pirkiniai.krepselioTurinys();
 
 /*6.Patobulinti 2 uždavinio piniginę taip, kad būtų galima skaičiuoti kiek 
 piniginėje yra monetų ir kiek banknotų. Parašyti metodą monetos(), kuris
 skaičiuotų kiek yra piniginėje monetų ir metoda banknotai() - popierinių 
 pinigų skaičiavimui. Kiekvieną atskirą dėjimą (ideti(kiekis) metodo kvietimą) 
-laikykite vienu banknotu ar viena moneta.*/
+laikykite vienu banknotu ar viena moneta.+*/
 
 /*7.(STATIC) Klasėje Kibiras1 (pirmas uždavinys) sukurti statinį metodą 
 akmenuSkaiciusVisuoseKibiruose(), kuris rodytų bendrą visuose kibiruose 
@@ -252,6 +288,45 @@ jeigu nesukirmijęs ir valgomas dėti į Krepsi objektą, t.y. Vykdyti deti(gryb
 metodą kol bus pririnktas pilnas krepšys nesukirmijusių ir valgomų grybų 
 (gali būti truputį daugiau nei dydis).
 */
+
+class Grybas {
+    constructor(){
+        this.valgomas = Math.random() < 0.5;
+        this.sukirmijes = Math.random() < 0.5;
+        this.svoris = rand(5, 45);
+        //this.krepsys = new Krepsys();
+    }
+
+    rand(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+}
+
+class Krepsys {
+    constructor(){
+        this.dydis = 500;
+        this.prikrauta = 0;
+
+
+    }
+    eitiGrybauti(grybukas){
+        if (grybukas.valgomas && !grybukas.sukirmijes){
+            this.prikrauta += grybukas.svoris;
+        }
+    }
+}
+
+
+const krepselis = new Krepsys();
+
+do {
+    krepselis.eitiGrybauti(new Grybas());
+    console.log(krepselis.prikrauta);
+} while(krepselis.dydis > krepselis.prikrauta);
+
+
 
 var get = function(cls) {
     return document.getElementsByClassName(cls)[0];
