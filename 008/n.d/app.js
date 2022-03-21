@@ -37,12 +37,15 @@ class Kibiras1 {
 }
 
 const kibiras = new Kibiras1(5);
+const kibiras1 = new Kibiras1(5);
 //console.log(kibiras.akmenuKiekis);
 kibiras.prideti1Akmeni();
+kibiras1.prideti1Akmeni(10);
 //console.log(kibiras.akmenuKiekis);
 kibiras.pridetiDaugAkmenu(15);
 //console.log(kibiras.akmenuKiekis);
 console.log('Is viso pririnkta akmenu:',kibiras.kiekPririnktaAkmenu());
+//console.log('Is viso pririnkta akmenu:',kibiras1.akmenuSkaiciusVisuoseKibiruose());
 
 
 
@@ -177,7 +180,7 @@ Bendram kelevių skaičiaus skaičiavimui sukurkite statinį metodą
 bendrasKeleiviuSkaicius(keleiviuSkaicius), kuris pridėtų arba atimtų 
 keleivius iš statinės savybės visiKeleiviai (kurioje yra įrašytas 
 bendras keleivių skaičius). Taip pat atitinkamai modifikuokite metodus 
-ilipa(keleiviuSkaicius) ir islipa(keleiviuSkaicius).*/
+ilipa(keleiviuSkaicius) ir islipa(keleiviuSkaicius).++-*/
 
 
 
@@ -232,7 +235,8 @@ pririnktų akmenų kiekį (visuose sukurtuose Kibiras objektuose). Skaičiuoti
 akmenim, kurie buvo surinkti visuose objektuose, sukurkite statini metodą 
 bendrasAkmenuSkaicius(akmenuSkaicius), kuris pridėtų prie statinės savybės 
 visiAkmenys (kurioje yra įrašytas ir saugomas bendras akmenų skaičius). 
-Taip pat atitinkamai modifikuokite metodus prideti1Akmeni(),  pridetiDaugAkmenu(kiekis).*/
+Taip pat atitinkamai modifikuokite metodus prideti1Akmeni(), 
+ pridetiDaugAkmenu(kiekis).-*/
 
 /*8.Sukurti klasę Stikline. Sukurti savybes turis ir kiekis. Turis turi būti 
 pasirenkamas objekto kūrimo metu. Parašyti metodą ipilti(kiekis), kuris 
@@ -242,7 +246,7 @@ kiekį. Pilant išpilamas visas kiekis, tas kas netelpa, nuteka per stalo virš�
 Sukurti metodą stiklinejeYra(), kuris į konsolę atspausdintų kiek stiklinėje 
 yra skysčio. Sukurti tris stiklinės objektus su tūriais: 200, 150, 100. 
 Didžiausią pripilti pilną ir tada ją ispilti į mažesnę stiklinę, o mažesnę 
-į dar mažesnę.*/
+į dar mažesnę.+-*/
 
 class Stikline {
     constructor (vanduo){
@@ -272,7 +276,7 @@ class Stikline {
 const stik = new Stikline();
 stik.ipilti(10);
 console.log(stik);
-stik.ispilti();
+stik.ispilti(2);
 console.log(stik);
 stik.stiklinejeYra();
 console.log(stik);
@@ -286,7 +290,7 @@ priskiriamos taip: valgomas- true arba false, sukirmijes- true arba false
 ir svoris- nuo 5 iki 45. Eiti grybauti, t.y. Kurti naujus Grybas objektus, 
 jeigu nesukirmijęs ir valgomas dėti į Krepsi objektą, t.y. Vykdyti deti(grybas) 
 metodą kol bus pririnktas pilnas krepšys nesukirmijusių ir valgomų grybų 
-(gali būti truputį daugiau nei dydis).
+(gali būti truputį daugiau nei dydis)+.
 */
 
 class Grybas {
