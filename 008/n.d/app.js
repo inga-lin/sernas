@@ -12,41 +12,54 @@ savybę akmenuKiekis  kuri lygi 0. Parašyti
 prideti1Akmeni() pridetiDaugAkmenu(kiekis) ir
 metodą išvedantį akmenų kiekį į konsolę- kiekPririnktaAkmenu().
 Sukurti vieną kibiro objektą ir pademonstruoti akmenų rinkimą
-į kibirą ir rezultatų išvedimą.*/
+į kibirą ir rezultatų išvedimą.+*/
 
 class Kibiras1 {
-
-    static akmenuSkaiciusVisuoseKibiruose(){}
-    constructor (kiekis){
-        this.akmenuKiekis = kiekis;
+    static visiAkmenys = 0;//
+    static akmenuSkaiciusVisuoseKibiruose(kiekis){
+        this.visiAkmenys += kiekis;//
+        
+    }
+    static bendrasAkmenuSkaicius(){
+        console.log(`bendras per visus objektus akmenu skaicius; ${Kibiras1.visiAkmenys}`);
+    }
+    constructor (){
+        this.akmenuKiekis = 0;
         
     }
     prideti1Akmeni(){
         this.akmenuKiekis = this.akmenuKiekis + 1; 
+        Kibiras1.akmenuSkaiciusVisuoseKibiruose(1);//
     }
 
     pridetiDaugAkmenu(kiekis){
         this.akmenuKiekis = this.akmenuKiekis + kiekis; 
+        //this.constructor.visiAkmenys += kiekis;//
+        Kibiras1.akmenuSkaiciusVisuoseKibiruose(kiekis);//
     }
     
     kiekPririnktaAkmenu(){
         return this.akmenuKiekis;
+        
+       
     }
 
 
 }
 
-const kibiras = new Kibiras1(5);
-const kibiras1 = new Kibiras1(5);
+const kibiras = new Kibiras1(0);
+const kibiras1 = new Kibiras1(0);
 //console.log(kibiras.akmenuKiekis);
 kibiras.prideti1Akmeni();
-kibiras1.prideti1Akmeni(10);
+kibiras1.prideti1Akmeni();
 //console.log(kibiras.akmenuKiekis);
-kibiras.pridetiDaugAkmenu(15);
+kibiras.pridetiDaugAkmenu(20);
+kibiras1.pridetiDaugAkmenu(20);
+Kibiras1.bendrasAkmenuSkaicius();
 //console.log(kibiras.akmenuKiekis);
 console.log('Is viso pririnkta akmenu:',kibiras.kiekPririnktaAkmenu());
 //console.log('Is viso pririnkta akmenu:',kibiras1.akmenuSkaiciusVisuoseKibiruose());
-
+//console.log('bendras akmenu skaicius', this.constructor.visiAkmenys );//
 
 
 /*2.Sukurti klasę Pinigine. Konstruktoriuje sukurti dvi savybes
@@ -57,7 +70,7 @@ kitaip- prie popieriniaiPinigai. Parašykite metodą skaiciuoti(),
 kuris suskaičiuotų ir išvestų į konsolę popieriniaiPinigai ir 
 metaliniaiPinigai sumą. Sukurti klasės objektą ir pademonstruoti
 veikimą. Nesvarbu kokios popierinės kupiūros ir metalinės monetos
-egzistuoja realiame pasaulyje.*/
+egzistuoja realiame pasaulyje.+*/
 
 class Pinigine {
     constructor(){
@@ -119,7 +132,7 @@ keleiviuSkaicius kuri yra lygi 0. Parašyti du metodus:
 ilipa(keleiviuSkaicius) ir islipa(keleiviuSkaicius). O taip pat 
 parašyti metoda vaziuoja(), kuris į konsolę išvestų troleibusu 
 važiuojančių keleivių skaičių. Atkreipkite dėmesį, kad troleibusu 
-važiuoti neigiamas keleivių skaičius negali.*/
+važiuoti neigiamas keleivių skaičius negali.+*/
 
 
 class Troleibusas {
@@ -236,7 +249,7 @@ akmenim, kurie buvo surinkti visuose objektuose, sukurkite statini metodą
 bendrasAkmenuSkaicius(akmenuSkaicius), kuris pridėtų prie statinės savybės 
 visiAkmenys (kurioje yra įrašytas ir saugomas bendras akmenų skaičius). 
 Taip pat atitinkamai modifikuokite metodus prideti1Akmeni(), 
- pridetiDaugAkmenu(kiekis).-*/
+ pridetiDaugAkmenu(kiekis).+*/
 
 /*8.Sukurti klasę Stikline. Sukurti savybes turis ir kiekis. Turis turi būti 
 pasirenkamas objekto kūrimo metu. Parašyti metodą ipilti(kiekis), kuris 
@@ -246,7 +259,7 @@ kiekį. Pilant išpilamas visas kiekis, tas kas netelpa, nuteka per stalo virš�
 Sukurti metodą stiklinejeYra(), kuris į konsolę atspausdintų kiek stiklinėje 
 yra skysčio. Sukurti tris stiklinės objektus su tūriais: 200, 150, 100. 
 Didžiausią pripilti pilną ir tada ją ispilti į mažesnę stiklinę, o mažesnę 
-į dar mažesnę.+-*/
+į dar mažesnę.+*/
 
 class Stikline {
     constructor (vanduo){
@@ -262,24 +275,33 @@ class Stikline {
         }
     }
 
-    ispilti(){
-        if (this.turis < this.kiekis){
-            this.kiekis = this.turis;
-        } 
+    ispilti(kiekis){
+       if (kiekis > this.turis){
+           this.kiekis = 0;
+       } else {
+           this.kiekis -= kiekis;
+       }
     }
 
-    stiklinejeYra(stiklinejeYraa){
-
+    stiklinejeYra(){
+     console.log(this.kiekis);
     }
 }
 
-const stik = new Stikline();
-stik.ipilti(10);
-console.log(stik);
-stik.ispilti(2);
-console.log(stik);
-stik.stiklinejeYra();
-console.log(stik);
+const stik1 = new Stikline(200);
+const stik2 = new Stikline(150);
+const stik3 = new Stikline(100);
+stik1.ipilti(200);
+console.log(stik1);
+stik1.ispilti(150);
+stik2.ipilti(150);
+stik1.ispilti(50);
+stik3.ipilti(50);
+console.log(stik1);
+stik1.stiklinejeYra();
+stik2.stiklinejeYra();
+stik3.stiklinejeYra();
+console.log('stikline',stik1);
 
 /*9.Sukurti klasę Grybas. Sukurti klasę Krepsys. Krepsys turi savybę 
 dydis,kuriai konstruktoriuje yra priskiriama reikšmė 500 ir savybę 
