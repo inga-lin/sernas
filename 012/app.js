@@ -128,15 +128,27 @@ K.krepselioTurinys();
 //set naudingiausia savybe, setintos reiksmes gali buti unikalios- tai yra pridejus daug drambliu vis tiek jis spauzdins tik viena drambli o ne 10pvz
 
 const set = new Set();
+const z = { t: 'Tankas' };
+const z1 = z;
+const z2 = z1;
+
 set.add('Dramblys');
-set.add('Dramblys');
-set.add('Dramblys');
-set.add('Sluota');
+set.add('Šluota');
 set.add('Tankas');
+set.add(z);
+set.add(z);
+set.add(z1);
+set.add(z2);
+set.add('Šluota');
 set.add('Dramblys');
-set.add({a:'Dramblys'});
-set.add({a:'Dramblys'});
-set.add({a:'Dramblys'});
+set.add({ s: 'Šluota' });
+set.add({ s: 'Šluota' });
+set.add({ s: 'Šluota' });
+
+set.clear();
+set.delete({ s: 'Šluota' });
+
+console.log(set);
 
 console.log('set',set);
 
