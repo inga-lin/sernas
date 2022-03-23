@@ -8,3 +8,5 @@ function Zveris({fore, msg}) {
 }
       
 export default Zveris;
+
+//Sukurti komponentą Zveris ir Miske paleisti tris skirtingus Zveris DONE!

@@ -15,4 +15,4 @@ function Miskas({forest, big, msg}) {
     );
 }
   
-  export default Miskas;
+export default Miskas;
