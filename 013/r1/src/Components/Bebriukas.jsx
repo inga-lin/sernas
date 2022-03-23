@@ -7,4 +7,4 @@ function Bebriukas (){
 
 }
 
-export default Bebriukas ;
+export default Bebriukas; 

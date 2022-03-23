@@ -1,13 +1,12 @@
 import './App.css';
-import Bebras from './Components/Bebras';
-import Vovere from './Components/Vovere';
+import Miskas from './Components/Miskas';
 
 function App() {
   return (
     <div className="App">
       <h1>Bla</h1>
-      <Vovere></Vovere>
-      <Bebras></Bebras>
+      <Miskas forest="blue" big="1" msg=' valio'></Miskas>
+      <Miskas forest="red" big="0"></Miskas>
     </div>
   );
 }
