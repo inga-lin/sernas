@@ -120,9 +120,9 @@ console.log(vetClinic);
 //kiek klinikoje yra murku
 
 let murka = 0;
-for (let i = 0; i < cat.name.length; i++ ){
+for (let i = 0; i < cat.length; i++ ){
     if (cat.name === 'Murka'){
-        murka++
+        murka++;
     }
 }
 
@@ -130,5 +130,12 @@ let murka1 = 0;
 //
 vetClinic.forEach(cat => murka1 =  cat.name === 'Murka' ? murka1 + 1 : murka1);
 
-console.log(vetClinic);
-console.log(murka1);
+console.log('murku yra', murka);
+console.log('murku1 yra',murka1);
+
+//7uzdavinys Reikia sukurti vaisiai objektą.
+// Objektas turi turėti dvi savybes. 
+//krepselis ir pills. Name yra random iš cats masyvo.
+// Pills yra objektas. Pills objektas turi dvi savybes 
+//blue ir red. Tų savybių reikšmės yra rand true arba 
+//false DONE!

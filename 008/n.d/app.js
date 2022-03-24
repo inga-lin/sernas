@@ -87,7 +87,7 @@ class Pinigine {
             this.monetos();//6uzdavinys
 
         }
-        else if (this.idetiPinigai > 2 ){
+        else if (this.idetiPinigai >= 2 ){
             this.popieriniaiPinigai = this.popieriniaiPinigai + kiekis;
             this.banknotai();//6uzdavinys
         }
@@ -235,6 +235,7 @@ pirkiniai.idetiSureli(30);
 pirkiniai.idetiPieno(20);
 pirkiniai.idetiDuonos(10);
 pirkiniai.krepselioTurinys();
+console.log('pirkiniai',pirkiniai);
 
 /*6.Patobulinti 2 uždavinio piniginę taip, kad būtų galima skaičiuoti kiek 
 piniginėje yra monetų ir kiek banknotų. Parašyti metodą monetos(), kuris
@@ -359,3 +360,75 @@ var get = function(cls) {
   };
   
   get('demo').innerHTML = +get('txt1').innerHTML + +get('txt2').innerHTML;
+
+  /*10.Sukurti klasę Vaisiai. Konstruktoriuje sukurti dvi savybes
+prakastiObuoliai ir sveikiObuoliai. Parašyti metodą 
+krepselia(kiekis), kuris prideda obuolius į krepseli.// Jeigu kiekis
+ nedidesnis už 2, tai prideda prie metaliniaiPinigai, jeigu 
+kitaip- prie popieriniaiPinigai.// Parašykite metodą skaiciuoti(),
+kuris suskaičiuotų ir išvestų į konsolę prakastiObuoliai ir 
+sveikiObuoliai sumą. Sukurti klasės objektą ir pademonstruoti
+veikimą. Nesvarbu koks prakastiObuoliais ir sveikiObuoliai
+egzistuoja realiame pasaulyje.+*/
+
+class Vaisiai{
+    constructor(){
+        this.prakastiObuoliai = 0;
+        this.sveikiObuoliai = 0;
+
+    }
+    krepselis(kiekis){
+        this.idetiObuoliai = kiekis;
+
+        if (this.idetiObuoliai < 2){
+            this.prakastiObuoliai += this.idetiObuoliai;
+        }
+        else if(this.idetiObuoliai >= 2){
+            this.sveikiObuoliai += this.idetiObuoliai;
+        }
+    }
+    skaiciuoti(){
+        console.log('isviso obuoliu',this.prakastiObuoliai + this.sveikiObuoliai);
+        console.log('prakasti obuoliai', this.prakastiObuoliai);
+        console.log('sveiki obuoliai', this.sveikiObuoliai);
+    }
+}
+
+const vaisiai = new Vaisiai();
+vaisiai.krepselis(1);
+vaisiai.krepselis(1);
+vaisiai.krepselis(2);
+vaisiai.krepselis(2);
+vaisiai.krepselis(2);
+vaisiai.skaiciuoti();
+
+//11 sukuriu random sveika arba nesveika obuoli
+
+const obuoliai = [];
+for (let i = 0; i < 10; i++){
+    obj = {};
+    const obuoliuBukle = Math.random() < 0.5;
+    if (obuoliuBukle === false){
+        obj.obuolys = "prakastas";
+    } else {
+        obj.obuolys = "sveikas";
+    }
+    console.log(obuoliuBukle.length);
+    obuoliai.push(obj);
+}
+console.log(obuoliai);
+
+let prakastiObuo = 0;
+let neprakastiObuo = 0;
+for (let k = 0; k < obuoliai.length; k++){
+    
+    if (obj[obuoliai[k]] === 'prakastas'){
+        prakastiObuo++
+    } else {
+        neprakastiObuo++
+    }
+}
+//obuoliai.forEach(obj => prakastiObuo =  obj.obuolys === 'prakastas' ? prakastiObuo + 1 : prakastiObuo);
+//obuoliai.forEach(obj => neprakastiObuo =  obj.obuolys === 'sveikas' ? neprakastiObuo + 1 : neprakastiObuo);
+console.log('prakastas',prakastiObuo);
+console.log('sveiki',neprakastiObuo);
