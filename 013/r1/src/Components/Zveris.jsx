@@ -1,7 +1,7 @@
-function Zveris({fore, msg}) {
+function Zveris({fore, msg, color}) {
     return (
         <div>
-            <h1> {fore}{msg || ''}</h1>               
+            <h1 color={color}> {fore}{msg || ''} </h1>               
         </div>
 
     );
