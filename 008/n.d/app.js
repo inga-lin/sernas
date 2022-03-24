@@ -420,15 +420,15 @@ console.log(obuoliai);
 
 let prakastiObuo = 0;
 let neprakastiObuo = 0;
-for (let k = 0; k < obuoliai.length; k++){
+/*for (let k = 0; k < obuoliai.length; k++){
     
     if (obj[obuoliai[k]] === 'prakastas'){
         prakastiObuo++
     } else {
         neprakastiObuo++
     }
-}
-//obuoliai.forEach(obj => prakastiObuo =  obj.obuolys === 'prakastas' ? prakastiObuo + 1 : prakastiObuo);
-//obuoliai.forEach(obj => neprakastiObuo =  obj.obuolys === 'sveikas' ? neprakastiObuo + 1 : neprakastiObuo);
+}*/
+obuoliai.forEach(obj => prakastiObuo =  obj.obuolys === 'prakastas' ? prakastiObuo + 1 : prakastiObuo);
+obuoliai.forEach(obj => neprakastiObuo =  obj.obuolys === 'sveikas' ? neprakastiObuo + 1 : neprakastiObuo);
 console.log('prakastas',prakastiObuo);
 console.log('sveiki',neprakastiObuo);

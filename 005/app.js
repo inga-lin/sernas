@@ -133,9 +133,3 @@ vetClinic.forEach(cat => murka1 =  cat.name === 'Murka' ? murka1 + 1 : murka1);
 console.log('murku yra', murka);
 console.log('murku1 yra',murka1);
 
-//7uzdavinys Reikia sukurti vaisiai objektą.
-// Objektas turi turėti dvi savybes. 
-//krepselis ir pills. Name yra random iš cats masyvo.
-// Pills yra objektas. Pills objektas turi dvi savybes 
-//blue ir red. Tų savybių reikšmės yra rand true arba 
-//false DONE!
