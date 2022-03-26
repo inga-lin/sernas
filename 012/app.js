@@ -64,7 +64,7 @@ console.log(map.get('war'));
 
 let a;
 map.set('u', a);
-console.log(map.has('u'));//tikrinam ar 'u yra ir gausim triu arba folse priklauso ar jis yra ar nea
+console.log(map.has('u'));//tikrinam ar 'u yra ir gausim triu arba false priklauso ar jis yra ar nea
 
 //
 const f = () => console.log('Hi');
