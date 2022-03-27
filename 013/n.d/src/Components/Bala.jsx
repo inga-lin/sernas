@@ -9,9 +9,9 @@ function Bala({autos}) {
         <div className="aa">  {/*taip padarom lista*/}
             {   
                 autos.map((auto, i) => <Tvenkinys key={i} auto={auto}></Tvenkinys>) 
+                
             }
-            
-       
+
         </div>     
 
     );
