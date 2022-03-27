@@ -1,4 +1,4 @@
-
+/////
 
 function Daiktas({auto}) {//auto=vardas
     if(auto.id % 2 !== 0){ 
