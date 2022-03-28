@@ -20,6 +20,19 @@ function Daiktas({auto}) {//auto=vardas
       
 export default Daiktas;
 
+/*
+     function Daiktas({auto}) {
+        return (
+            <>  
+                {auto.filter(e => e.id % 2  === 0).map(e => <h3 style={{color: e.color}}>{e.id} {e.type} {e.name} </h3>)}
+                {auto.filter(e => e.id % 2  !== 0).map(e => <h3 style={{color: e.color}}>{e.id} {e.type} {e.name} </h3>)}
+            </>
+        )
+    }
+    
+    export default Daiktas;
+*/
+
 /*    }else {
         return(
             <h3 style={{color:vardas.color}}> {vardas.type} surudijusi gelda</h3>

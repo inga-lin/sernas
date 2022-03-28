@@ -29,7 +29,7 @@ import Daiktas from './Daiktas';
   
 export default Tvenkinys;*/
 
-
+////////////
 export default function Tvenkinys({auto}) {
     
     if (auto.id % 2 !== 0 ) {
@@ -43,6 +43,19 @@ export default function Tvenkinys({auto}) {
     }
 }
 
+//////
+/*function Tvenkinys({auto}) {
+    return (
+        <> 
+            <Daiktas auto={auto}></Daiktas>
+            <Daiktas auto={auto}></Daiktas>
+        </>
+    )
+}
+
+export default Tvenkinys;  
+*/
+////////////////
  /* 
 export default function Tvenkinys({auto}) {
     
