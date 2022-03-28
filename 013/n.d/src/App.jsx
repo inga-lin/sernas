@@ -2,6 +2,7 @@
 import './App.css';
 import Bala from './Components/Bala';
 import Jura from './Components/Jura';
+import Vandenynas from './Components/Vandenynas';
 
 const seaPlaners = [
   {id: 1, type: 'man', name: 'Lina', color: 'blue'},
@@ -22,6 +23,7 @@ function App() {
        <h1>labas</h1>
        <Bala autos={seaPlaners}></Bala>
        <Jura autos={seaPlaners}></Jura>
+       <Vandenynas autos={seaPlaners}></Vandenynas>
     </div>
   );
 }
