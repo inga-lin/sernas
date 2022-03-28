@@ -1,5 +1,5 @@
-/////
-
+/////////////////////////////
+/*
 function Daiktas({auto}) {//auto=vardas
     if(auto.id % 2 !== 0){ 
         return (
@@ -18,20 +18,35 @@ function Daiktas({auto}) {//auto=vardas
     
 }
       
-export default Daiktas;
-
+export default Daiktas;*/
+//123
 /*
-     function Daiktas({auto}) {
-        return (
-            <>  
-                {auto.filter(e => e.id % 2  === 0).map(e => <h3 style={{color: e.color}}>{e.id} {e.type} {e.name} </h3>)}
-                {auto.filter(e => e.id % 2  !== 0).map(e => <h3 style={{color: e.color}}>{e.id} {e.type} {e.name} </h3>)}
-            </>
-        )
-    }
+function Daiktas({autos}) {
+    return (
+        <>  
+                {
+                autos.filter(e => e.id % 2  === 0).map((e, i ) => <h3 key={i} style={{color: e.color}}>{e.id} {e.type} {e.name} </h3>)
+                }
+                {
+                autos.filter(e => e.id % 2  !== 0).map((e, i ) => <h3 key={i} style={{color: e.color}}>{e.id} {e.type} {e.name} </h3>)
+                }
+        </>
+    )
+}
     
-    export default Daiktas;
+export default Daiktas;
 */
+export default function Daiktas({ autos }) {
+    return (
+      <>
+        <div>
+          {autos.id} {autos.type}
+          <span style={{ color: autos.color }}> {autos.name}</span>{" "}
+          {autos.color}{" "}
+        </div>
+      </>
+    );
+  }
 
 /*    }else {
         return(

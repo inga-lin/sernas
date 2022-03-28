@@ -29,7 +29,8 @@ import Daiktas from './Daiktas';
   
 export default Tvenkinys;*/
 
-////////////
+////////////123
+/*
 export default function Tvenkinys({auto}) {
     
     if (auto.id % 2 !== 0 ) {
@@ -42,19 +43,37 @@ export default function Tvenkinys({auto}) {
         )
     }
 }
-
+*/
 //////
-/*function Tvenkinys({auto}) {
+/*
+function Tvenkinys({autos}) {
     return (
         <> 
-            <Daiktas auto={auto}></Daiktas>
-            <Daiktas auto={auto}></Daiktas>
+            <h1>lyginiai id</h1>
+            <Daiktas autos={autos}></Daiktas>
+            <h1>nelyginiai id</h1>
+            <Daiktas autos={autos}></Daiktas>
         </>
     )
 }
 
 export default Tvenkinys;  
 */
+export default function Tvenkinys({ autos }) {
+    return (
+      <>
+            <h1>Poriniai id</h1>
+            {
+            autos.filter(e => e.id % 2  === 0).map((e, i ) => <h3 key={i} style={{color: e.color}}>{e.id} {e.type} {e.name} </h3>)
+            }
+            <h1>neporiniai id</h1>
+            {
+            autos.filter(e => e.id % 2  !== 0).map((e, i ) => <h3 key={i} style={{color: e.color}}>{e.id} {e.type} {e.name} </h3>)
+            }
+      </>
+    );
+  }
+
 ////////////////
  /* 
 export default function Tvenkinys({auto}) {

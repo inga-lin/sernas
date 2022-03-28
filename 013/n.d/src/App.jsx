@@ -1,6 +1,7 @@
 
 import './App.css';
 import Bala from './Components/Bala';
+import Tvenkinys from './Components/Tvenkinys';
 import Jura from './Components/Jura';
 import Pasaulis from './Components/Pasaulis';
 import Vandenynas from './Components/Vandenynas';
@@ -24,6 +25,8 @@ function App() {
       <h1>labas</h1>
       <h1>1uzduotis</h1>
       <Bala autos={seaPlaners}></Bala>
+      <h1>2uzduotis</h1>
+      <Tvenkinys autos={seaPlaners}></Tvenkinys>
       <h1>3uzduotis</h1>
       <Jura autos={seaPlaners}></Jura>
       <h1>4uzduotis</h1>
@@ -35,6 +38,16 @@ function App() {
 }
 
 export default App;
+
+//123
+/*
+      <h1>3uzduotis</h1>
+      <Jura autos={seaPlaners}></Jura>
+      <h1>4uzduotis</h1>
+      <Vandenynas autos={seaPlaners}></Vandenynas>
+      <h1>5uzduotis</h1>
+      <Pasaulis autos={seaPlaners} ></Pasaulis>
+*/
 
 /*N.D. uzduotis
 REACT List
