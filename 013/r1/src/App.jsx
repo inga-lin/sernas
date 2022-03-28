@@ -1,27 +1,28 @@
 import './App.css';
-import Garazas from './Components/Garazas';
+import Apskritimas from './Components/Apskritimas';
+import Geles from './Components/Geles';
+const gelytes = [
 
-const autoList = [
+    {name: 'Tulpė', color: 'red'},
 
-    {type: 'Volvo', color: 'blue', price: '78000'},
+    {name: 'Gvazdikas', color: 'yellow'},
 
-    {type: 'MB', color: 'green', price: '20000'},
+    {name: 'Raktelis', color: 'blue'},
 
-    {type: 'Audi', color: 'black', price: '93000'},
+    {name: 'Bijūnas', color: 'red'},
 
-    {type:'Kamaz', color: 'orange', price: '178000'}
+    {name: 'Alyva', color: 'orange'},
 
 ]
+
 function App() {
   return (
     <div className="App">
-      <h1>listas</h1>
-      <Garazas autos={autoList}></Garazas>
+       <h1>Geles</h1>
+       <Geles geles={gelytes}></Geles>
+       <Apskritimas  size="200px"></Apskritimas>
     </div>
   );
 }
 
 export default App;
-
-//Komponente Garazas yra trys automobiliai Opel Volvo ir Man automobiliai yra komponentas Auto DONE!
-//Patobulint Garazas ir Auto, kad būtų galima atvaizduot autoList DONE!
