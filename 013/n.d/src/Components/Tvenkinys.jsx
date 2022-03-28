@@ -64,16 +64,21 @@ export default function Tvenkinys({ autos }) {
       <>
             <h1>Poriniai id</h1>
             {
-            autos.filter(e => e.id % 2  === 0).map((e, i ) => <h3 key={i} style={{color: e.color}}>{e.id} {e.type} {e.name} </h3>)
+            autos.filter(e => e.id % 2  === 0).map((autos ) => <Daiktas   autos={autos}> </Daiktas>)
             }
             <h1>neporiniai id</h1>
             {
-            autos.filter(e => e.id % 2  !== 0).map((e, i ) => <h3 key={i} style={{color: e.color}}>{e.id} {e.type} {e.name} </h3>)
+            autos.filter(e => e.id % 2  !== 0).map((autos) => <Daiktas  autos={autos}> </Daiktas>)
             }
       </>
     );
   }
 
+  /*
+            {
+            autos.filter(e => e.id % 2  !== 0).map((autos, i) => <Daiktas key={i} autos={autos}> </Daiktas>) su key-neiseiles rodo skaicius porinius ir neporinius
+            }
+  */
 ////////////////
  /* 
 export default function Tvenkinys({auto}) {

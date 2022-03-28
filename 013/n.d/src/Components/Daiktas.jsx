@@ -39,11 +39,7 @@ export default Daiktas;
 export default function Daiktas({ autos }) {
     return (
       <>
-        <div>
-          {autos.id} {autos.type}
-          <span style={{ color: autos.color }}> {autos.name}</span>{" "}
-          {autos.color}{" "}
-        </div>
+        <h1 style={{color: autos.color}}>{autos.id} {autos.type} {autos.name}</h1>
       </>
     );
   }
