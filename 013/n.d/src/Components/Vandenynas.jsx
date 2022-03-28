@@ -23,4 +23,10 @@ export default function Vandenynas({autos}) {
     )
 }
 
+/*
+4.Sukurti keturis komponentus Vandenynas, Tipas, Vardas, Spalva. Vandenynas tėvinis komponentas kiti trys vaikiniai.
+Vaikiniuose komponentuose atvaizduoti tą patį masyvą, tik išrūšiuotą pagal komponento vardą
+(pvz Tipas išrūšiuota pagal tipą ir t.t.).*/
+
 //autos.sort((a,b)=> a.name - b.name).map((auto, i) =>  <Vardas key={i} auto={auto}></Vardas>)
+//Metodas localeCompare() grąžina skaičių, nurodantį, ar nuorodos eilutė yra prieš, ar po jos, ar yra tokia pati kaip nurodyta eilutė rūšiavimo tvarka.

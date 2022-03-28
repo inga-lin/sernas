@@ -72,7 +72,6 @@ export default function Tvenkinys({auto}) {
             <Daiktas auto={auto}></Daiktas>
             <Daiktas auto={auto}></Daiktas>
         </div>
-
     )
  
     
@@ -108,3 +107,9 @@ export default function Tvenkinys({auto}) {
     }
     
 }*/
+
+/*
+2.Sukurti du komponentus Tvenkinys, Daiktas -  tėvinį ir vaikinį atitinkamai.
+Tvenkinys komponente du kartus panaudokite komponentą Daiktas atvaizduoti
+masyvą seaPlaners - vieną kartą poriniams kitą kartą neporiniams įrašams 
+(pagal id, ne masyvo indeksą).*/

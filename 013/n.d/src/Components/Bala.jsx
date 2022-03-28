@@ -6,7 +6,7 @@ import Tvenkinys from './Tvenkinys';
 // 3-11eiluteje yrasytume autos.map((auto, i) => <Automobilis key={uuidv4()} vardas={auto}></Automobilis>)
 function Bala({autos}) {
     return (
-        <div className="aa">  {/*taip padarom lista*/}
+        <div className="aa">  
             {   
                 autos.map((auto, i) => <Tvenkinys key={i} auto={auto}></Tvenkinys>) 
                 
