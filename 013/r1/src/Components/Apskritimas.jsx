@@ -13,7 +13,7 @@ class Apskritimas extends Component{
         //pakeisim steita//this.state.color NEGALIMA
         this.setState({
             color: 'red',
-            size: '50px'
+            size: '100px'
         });
         console.log(this.state.color);//nuskaitom spalva
     }
