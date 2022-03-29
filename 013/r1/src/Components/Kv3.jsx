@@ -1,4 +1,4 @@
-import {Component, react} from "react"
+import {Component} from "react"
 Class Kv3 extends Component{
     
 
