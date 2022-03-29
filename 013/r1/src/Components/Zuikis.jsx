@@ -8,3 +8,6 @@ export default function Zuikis() {
     )
 
 }
+/*2.Sukurti komponentą, kuris užrašytų “LABAS, ZUIKI!”. 
+Raidžių spalva pink. Spalva tekstui nurodoma komponento 
+viduje naudojant style.*/

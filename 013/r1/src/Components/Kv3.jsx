@@ -1,5 +1,5 @@
-import {Component} from "react"
-Class Kv3 extends Component{
+/*import {Component} from "react"
+class Kv3 extends Component{
     
 
     contructor(props){
@@ -14,11 +14,13 @@ Class Kv3 extends Component{
   
     componentWillUnmount() {
     }
-    return(
-        <div>
-            {this.props.elements.map((e, i) => <h1 key={i} style={{color:'#'+e}}>kv</h1>)}
-        </div>
-    )
+    render(){
+        return(
+            <div>
+                {this.props.elements.map((e, i) => <h1 key={i} style={{color:'#'+e}}>kv</h1>)}
+             </div>
+        )
+    }
 }
 
-export default Kv3;
+export default Kv3;*/
