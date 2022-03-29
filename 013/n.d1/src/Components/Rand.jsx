@@ -45,7 +45,12 @@ class Rand extends Component{
         const rand = min + Math.floor(Math.random() * (max - min) + 1);
         this.setState({ random: this.state.random + rand });
     }*/
-    rand = (min, max) => {
+    random = () => {
+        this.setState({
+            random: this.rand(5, 25),
+          });
+    }
+    rand (min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min + 1) + min);
@@ -59,11 +64,11 @@ class Rand extends Component{
                 borderRadius: this.state.borderRadius,
                 background: this.state.color,
                 
-            }}><h1>{this.rand(5, 25)}</h1>
+            }}><h1>{this.state.random}</h1>
             </div>
             
             <button onClick={this.valio}>change</button>
-            <button onClick={this.rand}>random</button>
+            <button onClick={this.random}>random</button>
             
         </>
         )
