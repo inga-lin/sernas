@@ -7,13 +7,15 @@
 }
 export default Dogs1;*/
 
+import DogsSkai from "./DogsSkai";
+
 function Dogs1({dogs}) {
     
     return (
        
         <div>
             {
-                dogs.sort((a,b) => (a < b ? -1 : 1)).map(dogs => <h1 style={{backgroundColor: 'pink', color:'white', height: '100px', width:"100px",borderRadius:'50%', padding:'100px'}}>{dogs}</h1>)
+                (dogs.sort((a,b) => b.length - a.length)).map((dogs, i) => <DogsSkai key={i} dogs={dogs} number={i + 1 } >{dogs}</DogsSkai>) //isrusiavom sunis nuo ilgiausio pavadinimo iki trumpiausio
             }   
             
         </div>
@@ -23,4 +25,5 @@ function Dogs1({dogs}) {
 }
 export default Dogs1;
 
-//dogs.sort((a,b) => b - a) neveikia
+//dogs.sort((a,b) => b - a)) neveikia
+//dogs.sort((a,b) =>  (a < b ? -1 : 1))

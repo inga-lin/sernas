@@ -1,4 +1,4 @@
-function Dogs2({dogs}) {
+/*function Dogs2({dogs}) {
     for(let i = 0; i < dogs.length; i++){ 
         if (dogs[i] % 2 !== 0 ) {
             return (
@@ -11,8 +11,36 @@ function Dogs2({dogs}) {
         }
     }
 }
-export default Dogs2;
+export default Dogs2;*/
 
+import DogsKvad from "./DogsKvad";
+import DogsTrikam from "./DogsTrikam";
+
+function Dogs2 ({dogs}) {
+   
+
+   
+    return(
+        
+        <div>
+            {
+              dogs.map((dogs, i) => i % 2 !== 0 ? (<DogsKvad key={i} dogs={dogs} ></DogsKvad>) : (<DogsTrikam key={i} dogs={dogs} ></DogsTrikam>))
+            }
+        </div>
+        
+    )
+}
+
+export default Dogs2; 
+
+
+/*
+        <div>
+            {
+              dogs.map((dogs, i) => i % 2 !== 0 ? (<DogsKvad key={i} dogs={dogs} ></DogsKvad>) : (<DogsTrikam key={i} dogs={dogs} ></DogsTrikam>))
+            }
+        </div>
+*/
 /*
         <div>
             {
