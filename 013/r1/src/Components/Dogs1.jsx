@@ -27,3 +27,5 @@ export default Dogs1;
 
 //dogs.sort((a,b) => b - a)) neveikia
 //dogs.sort((a,b) =>  (a < b ? -1 : 1))
+
+//Atvaizduoti masyvą dogs. Kiekvienas šuo atskirame apskritime. Šunys turi būti išrūšiuoti nuo ilgiausio žodžio iki trumpiausio, o apskritimai sunumeruoti nuo 1 iki galo.

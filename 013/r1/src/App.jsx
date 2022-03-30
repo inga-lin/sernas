@@ -2,6 +2,8 @@ import './App.css';
 import Dogs from './Components/Dogs';
 import Dogs1 from './Components/Dogs1';
 import Dogs2 from './Components/Dogs2';
+import Dogs3 from './Components/Dogs3';
+import Dogs4 from './Components/Dogs4';
 //import Apskritimas from './Components/Apskritimas';
 import Kva from './Components/Kva';
 import TrysPropsai from './Components/TrysPropsai';
@@ -25,6 +27,8 @@ function App() {
        <Dogs dogs={dogs} ></Dogs>
        <Dogs1 dogs={dogs}></Dogs1>
        <Dogs2  color='pink' dogs={dogs}></Dogs2>
+       <Dogs3 dogs={dogs}></Dogs3>
+       <Dogs4 dogs={dogs}></Dogs4>
        
     </div>
   );

@@ -32,7 +32,7 @@ function Dogs2 ({dogs}) {
 }
 
 export default Dogs2; 
-
+//Atvaizduoti masyvą dogs. Poriniuose indeksuose esančius šunis atvaizduoti kvadratuose, neporinius trikampiuose (trikampio css pasigooglint).
 
 /*
         <div>

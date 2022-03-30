@@ -51,3 +51,5 @@ function Dogs({dogs}) {
 
 }
 export default Dogs;
+
+//Atvaizduoti masyvą dogs. Kiekvienas šuo atskirame kvadrate.
