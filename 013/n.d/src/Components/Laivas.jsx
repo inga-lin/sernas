@@ -7,7 +7,7 @@ function Laivas({auto}) {//auto=vardas
             </div>
     
         );
-        }else {
+    }else {
             return(
                 <h3 style={{color:auto.color}}> {auto.id}  Laivas {auto.name}</h3>
             )

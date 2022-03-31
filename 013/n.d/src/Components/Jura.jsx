@@ -3,10 +3,12 @@ import Sala from "./Sala";
 import Valtis from "./Valtis";
 
 export default function Jura({autos}) {
+    
+
     return (
         <>
             {
-                autos.map((auto, i) => <Valtis key={i} auto={auto}></Valtis>)
+                autos.map((auto, i) =>  <Valtis key={i} auto={auto}></Valtis>)
             }
             {
                 autos.map((auto, i) =>  <Laivas key={i} auto={auto}></Laivas>)

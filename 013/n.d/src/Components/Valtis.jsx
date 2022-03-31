@@ -7,7 +7,7 @@ function Valtis({auto}) {//auto=vardas
             </div>
     
         );
-        }else {
+    }else {
             return(
                 <h1 style={{color:auto.color}}> {auto.id}  Valtis {auto.name}</h1>
             )
