@@ -43,7 +43,7 @@ function Dogs({dogs}) {
         <div>
             {
                 
-                dogs.map(dogs => <h1 style={{backgroundColor: 'red', height: '150px', width:"150px"}}>{dogs}</h1>)
+                dogs.map((dogs, i) => <h1 key={i} style={{backgroundColor: 'red', height: '150px', width:"150px"}}>{dogs}</h1>)
             }   
         </div>
 

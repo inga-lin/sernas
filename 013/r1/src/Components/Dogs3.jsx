@@ -4,7 +4,7 @@ function Dogs3({dogs}) {
        
         <div>
             {
-               dogs.map((dogs, i) => dogs[0] === dogs[0].toLowerCase() ? (<h1 key={i} >{dogs}</h1>) : (''))
+               dogs.map((dogs, i) => dogs[0].toLowerCase() === dogs[0] ? (<h1 key={i} >{dogs}</h1>) : (''))
             }   
         </div>
 

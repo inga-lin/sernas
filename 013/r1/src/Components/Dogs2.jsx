@@ -2,11 +2,11 @@
     for(let i = 0; i < dogs.length; i++){ 
         if (dogs[i] % 2 !== 0 ) {
             return (
-                <h1 style={{backgroundColor: 'red', color:'pink', height: '150px', width:"150px"}} > {dogs}</h1>
+                <h1 dogs={dogs} style={{backgroundColor: 'red', color:'pink', height: '150px', width:"150px"}} > {dogs}</h1>
             )
         } else if (dogs[i] % 2 === 0 ){
             return (
-                <h1 style={{width:'0px', height:'0px', borderBottom:'170px solid red', borderLeft:'170px solid transparent' }} >{dogs} </h1>
+                <h1 key={i} dogs={dogs} style={{width:'0px', height:'0px', borderBottom:'170px solid red', borderLeft:'170px solid transparent' }} >{dogs} </h1>
             )
         }
     }
@@ -33,7 +33,14 @@ function Dogs2 ({dogs}) {
 
 export default Dogs2; 
 //Atvaizduoti masyvą dogs. Poriniuose indeksuose esančius šunis atvaizduoti kvadratuose, neporinius trikampiuose (trikampio css pasigooglint).
-
+/*
+veikia ir taip
+<div>
+{
+  dogs.map((dogs, i) => i % 2 !== 0 ? ( <h1 key={i} dogs={dogs} style={{backgroundColor: 'red', color:'pink', height: '150px', width:"150px"}} > {dogs}</h1>) : ( <h1 key={i} dogs={dogs} style={{width:'0px', height:'0px', borderBottom:'170px solid red', borderLeft:'170px solid transparent' }} >{dogs} </h1>))
+}
+</div>
+*/
 /*
         <div>
             {
