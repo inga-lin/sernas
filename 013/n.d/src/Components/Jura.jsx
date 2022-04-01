@@ -16,6 +16,9 @@ export default function Jura({autos}) {
             {
                 autos.map((auto, i) =>  <Sala key={i} auto={auto}></Sala>)
             }
+            {
+                autos.map((auto, i) => auto.type === `fish` ? (<h1 key={i} style={{color: auto.color}}>{auto.id} Jura {auto.name}</h1>) : (<h1 style={{color:auto.color}}>{auto.id} {auto.type} {auto.name}</h1>))
+            }
         </>
             
     )
