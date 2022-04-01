@@ -1,6 +1,8 @@
 
 import './App.css';
+import AddMygtukas from './Components/AddMygtukas';
 import Kvadratas from './Components/Kvadratas';
+import Pliusas from './Components/Pliusas';
 import Rand from './Components/Rand';
 
 function App() {
@@ -9,6 +11,8 @@ function App() {
       <h1>Labas</h1>
       <Kvadratas ></Kvadratas>
       <Rand></Rand>
+      <Pliusas></Pliusas>
+      <AddMygtukas></AddMygtukas>
     </div>
   );
 }
