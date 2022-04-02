@@ -33,3 +33,8 @@ class AddMygtukas extends Component{
 }
 export default AddMygtukas;
 
+
+/*
+Sukurti aplikaciją, kuri turi mygtuką add, kurį paspaudus vieną 
+kartą atsiranda mėlynas kvadratas, paspaudus du - du kvadratai ir t.t.
+*/

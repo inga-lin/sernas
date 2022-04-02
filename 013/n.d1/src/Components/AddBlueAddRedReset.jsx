@@ -1,5 +1,4 @@
 import { Component } from "react";
-
 class AddBlueAddRedReset extends Component{
     constructor(props) {
         super();
@@ -57,13 +56,4 @@ class AddBlueAddRedReset extends Component{
 }
 export default AddBlueAddRedReset;
 
-/*
-function Kv2({elements}){
-    return(
-        <div>
-            {elements.map((e, i) => <h1 key={i} style={{color:'#'+e}}>kv</h1>)}
-        </div>
-    )
-}
-export default Kv2;
-*/
+
