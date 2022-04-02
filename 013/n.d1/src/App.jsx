@@ -1,5 +1,6 @@
 
 import './App.css';
+import AddBlueAddRedReset from './Components/AddBlueAddRedReset';
 import AddMygtukas from './Components/AddMygtukas';
 import Kvadratas from './Components/Kvadratas';
 import Pliusas from './Components/Pliusas';
@@ -13,6 +14,7 @@ function App() {
       <Rand></Rand>
       <Pliusas></Pliusas>
       <AddMygtukas></AddMygtukas>
+      <AddBlueAddRedReset></AddBlueAddRedReset>
     </div>
   );
 }
