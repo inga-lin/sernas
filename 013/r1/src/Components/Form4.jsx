@@ -70,7 +70,7 @@ function Form4() {
 export default Form4;
 
 /*
-Sukurti komponentą su trim select pasirinkimais ir teksto įvedimo laukeliu.
+4.Sukurti komponentą su trim select pasirinkimais ir teksto įvedimo laukeliu.
  Įvedamas tekstas turi būti atvaizduojamas atskirai komponento apačioje. 
  Select pasirinkimai sudaryti iš 5 skirtingų spalvų, 5 skirtingų fontų dydžių 
  ir 5 skirtingų fontų (Arial, Times new Roman ar panašiai) Select pasirinkimų 
