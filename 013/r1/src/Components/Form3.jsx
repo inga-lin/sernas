@@ -12,12 +12,13 @@ function Form3() {
     const changePirmas = e => {
         console.log(e.target.value);
         setPirmas(e.target.value); 
-
+        setAntras(e.target.value / 2);//jei ivesim pirma skaiciu anta skaiciu padalinsim is 2
     }
 
     const changeAntras = e => {
         console.log(e.target.value);
-        setAntras((e.target.value)); 
+        setAntras(e.target.value); 
+        setPirmas(e.target.value * 2); //jei ivesim antra skaiciu padauginsim pirma skaiciu is 2
     }
 
     const changePaspausk = () => {//
@@ -38,7 +39,7 @@ function Form3() {
         <input type="text"  onChange={changePirmas} value={pirmas}/>
         <input type="text"  onChange={changeAntras} value={antras}/>
         <button onClick={changePaspausk}>Paspausk</button>
-        {paspausk.map((k, i) => (<h1 key={i}> {k.pirmas * 2} {k.antras * 2} </h1>))}
+        {paspausk.map((k, i) => (<h1 key={i}> {k.pirmas } {k.antras } </h1>))}
         </>
     )
 }

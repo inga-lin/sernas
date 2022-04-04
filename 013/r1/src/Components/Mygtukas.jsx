@@ -1,10 +1,11 @@
 
-function Mygtukas({add}){
+function Mygtukas({add, addKv}){
 
     return(
 
         <>
            <button onClick={add}>Add</button>{/*1 pasidarommygtuka*/} 
+           <button onClick={addKv}>ADD Kvadratukas</button>
         </>
     )
 

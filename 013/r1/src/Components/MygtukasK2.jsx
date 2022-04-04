@@ -1,10 +1,10 @@
-
+import BS from './BS'
 function MygtukasK2({kvadratas}){
 
     return(
 
         <>
-           {kvadratas.map( (kvadratas, i)  => <div  className="BS" key={i}>{kvadratas}</div>)}
+           {kvadratas.map( (kvadratas, i)  => <BS  key={i} sk={i}></BS>)}
             
         </>
     )

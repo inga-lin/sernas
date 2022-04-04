@@ -10,23 +10,29 @@ import MygtukasK1 from './Components/MygtukasK1';
 import { useState } from 'react';
 import MygtukasK2 from './Components/MygtukasK2';
 //import Kazkas from './Components/Kazkas';
-//import RaudoniKvadratai from './Components/Kazkas';
 
 
+//////
 function App() {
-    const [sk, setSk] = useState(0)//1.pradzioje rasys non kuris yra pradinis title
-
+    //cia Mygtukas ir Mygtukas2
+    const [sk, setSk] = useState(0);//skaicius vus
+    const [kv, setKv] = useState([]);//kvadratas bus
 
     const add = () => {
-        // setSkaicius(items => [...items, items.length + 1]);//1
-        setSk(s => ++s); //prie 0vis pridesim po viena skaiciu
-     }
+        // setSkaicius(items => [...items, items.length + 1]);//1var
+        setSk(s => ++s); //prie 0vis pridesim po viena skaiciu//2var
+    }
 
-     const [kvadratas, setKvadratas] = useState([])//pradzioje rasys non kuris yra pradinis title
-    
+    const addKv = () => {
+        setKv(k => [...k, 'bū']);
+    }
 
-     const add1 = () => {
-         setKvadratas(items => [...items, items.length + 1]);
+
+    //cia MygrukasK1 ir MygtukasK2
+    const [kvadratas, setKvadratas] = useState([])//pradzioje rasys non kuris yra pradinis title
+    const add1 = () => {
+        // setKvadratas(items => [...items, items.length + 1]);
+        setKvadratas(k => [...k, 'bu']);
      }
    
  
@@ -44,12 +50,11 @@ function App() {
        <h1>N.D.4</h1>
        <Form4></Form4>
        <h1>Paskaita</h1>
-       <Mygtukas add={add}></Mygtukas>
-       <Mygtukas2 sk={sk}></Mygtukas2>
-       <MygtukasK1 add1={add1}></MygtukasK1>
+       <Mygtukas add={add} addKv={addKv}></Mygtukas>
+       <Mygtukas2 sk={sk} kv={kv}></Mygtukas2>
+       <MygtukasK1 add1={add1} ></MygtukasK1>
        <MygtukasK2 kvadratas={kvadratas}></MygtukasK2>
-       
-
+      
     </div>
   );
 }

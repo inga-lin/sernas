@@ -62,7 +62,7 @@ function Form4() {
                 <option value='Verdana, Geneva, Tahoma, sans-serif'>Verdana, Geneva, Tahoma, sans-serif</option>
             </select>
             <h1 style={{fontFamily:select3}}>{select3}</h1>{/*5 puslapyje atspauzdins pasirinkima*/}
-            <input type="text" placeholder='Iveskit skaiciu' onChange={changeSkaicius} value={skaicius}/>
+            <input type="text" placeholder='Jusu tekstas' onChange={changeSkaicius} value={skaicius}/>
             <h1 style={{color:select1, fontSize:select2, fontFamily:select3}}>{skaicius}</h1>
         </>
     )

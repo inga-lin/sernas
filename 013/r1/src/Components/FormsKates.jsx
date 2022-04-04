@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 function FormsKates() {
@@ -7,7 +7,7 @@ function FormsKates() {
     const [svoris, setSvoris] = useState(''); 
     const [paspausk, setPaspausk] = useState([]);
 
-    
+
 
     const changeKate = e => {//1.
         console.log(e.target.value);//1
@@ -20,25 +20,29 @@ function FormsKates() {
         setSvoris(e.target.value); 
     }
 
-   /* const changePaspausk = (e) => {
-        const raudonas = [];
-        for (let i = 0; i < kate; i++){ //cia sugeneruojam random skaiciu
-            raudonas.push({kate});
-        }
-        setPaspausk(items => [...items,...raudonas]);// nurodom laukelyje kiek norim kvadratu ir jis cia sugeneruoja tik kvadratu ir rand skaiciu i ji ideda
-    }*/
 
-    const changePaspausk = () => {//
+   const changePaspausk = () => {//
+    //setPaspausk([...paspausk, {kate:kate, svoris:svoris}].sort((a, b) => a.svoris - b.svoris));// irgi geras variantas ir trumpesnis
         const sudedamKates = [];//
         sudedamKates.push({kate, svoris});//
+        setPaspausk((info) => [...info, ...sudedamKates].sort((a, b) => a.svoris - b.svoris));// isrusiuojam kates
         console.log(sudedamKates);//
-        setPaspausk((info) => [...info, ...sudedamKates]);//
-        sudedamKates.sort((a, b) => a.svoris - b.svoris);//nuo didziausio iki maziausio svorio isrusiuojam
-        console.log(sudedamKates);//
-       
+  
     }
 // localStorage.setItem('manoLentyna44', JSON.stringify([]));
 ///console.log(JSON.parse(localStorage.getItem('manoLentyna')));
+
+
+    useEffect(()=>{ //per juos issisaugojam localStorage//nepamirst virsuje parasyti import { useEffect, useState } from "react"; kitaip neveiks
+        const lentyna = localStorage.getItem('lentyna')
+        if(lentyna){
+            setPaspausk(JSON.parse(lentyna))
+     }
+},[])
+    
+    useEffect(()=>{
+        localStorage.setItem('lentyna',JSON.stringify(paspausk))
+    })
 
 
 
