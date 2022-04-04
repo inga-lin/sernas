@@ -69,3 +69,9 @@
   align-items: center;
   margin: 10px;
 }
+
+.avys{
+  display:flex;
+  justify-content: space-around;
+  gap: 200px;
+}

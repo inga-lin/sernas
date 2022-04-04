@@ -9,6 +9,7 @@ import Mygtukas2 from './Components/Mygtukas2';
 import MygtukasK1 from './Components/MygtukasK1';
 import { useState } from 'react';
 import MygtukasK2 from './Components/MygtukasK2';
+import AviuKarviuGamykla from './Components/AviuKarviuGamykla';
 //import Kazkas from './Components/Kazkas';
 
 
@@ -39,22 +40,26 @@ function App() {
 
   return (
     <div className="App">
-       <h1 style={{color:'pink'}}>Forms paskaita</h1>
-       <Form></Form>
-       <h1>N.D.1</h1>
-       <FormsKvadRandSkaicius></FormsKvadRandSkaicius>
-       <h1>N.D.2</h1>
-       <FormsKates></FormsKates>
-       <h1>N.D.3</h1>
-       <Form3></Form3>
-       <h1>N.D.4</h1>
-       <Form4></Form4>
-       <h1>Paskaita</h1>
-       <Mygtukas add={add} addKv={addKv}></Mygtukas>
-       <Mygtukas2 sk={sk} kv={kv}></Mygtukas2>
-       <MygtukasK1 add1={add1} ></MygtukasK1>
-       <MygtukasK2 kvadratas={kvadratas}></MygtukasK2>
-      
+      <h1 style={{color:'pink'}}>Forms paskaita</h1>
+      <Form></Form>
+      <h1>N.D.1</h1>
+      <FormsKvadRandSkaicius></FormsKvadRandSkaicius>
+      <h1>N.D.2</h1>
+      <FormsKates></FormsKates>
+      <h1>N.D.3</h1>
+      <Form3></Form3>
+      <h1>N.D.4</h1>
+      <Form4></Form4>
+      <h1>Paskaita</h1>
+      <Mygtukas add={add} addKv={addKv}></Mygtukas>
+      <Mygtukas2 sk={sk} kv={kv}></Mygtukas2>
+      <MygtukasK1 add1={add1} ></MygtukasK1>
+      <MygtukasK2 kvadratas={kvadratas}></MygtukasK2>
+      <div className="avys">
+        <h1 >Avys</h1>
+        <h1>Karves</h1>
+      </div>
+      <AviuKarviuGamykla></AviuKarviuGamykla>
     </div>
   );
 }
