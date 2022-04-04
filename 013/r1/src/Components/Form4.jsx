@@ -6,7 +6,7 @@ function Form4() {
     const [select1, setSelect1] = useState('');//5.
     const [select2, setSelect2] = useState('');//5.
     const [select3, setSelect3] = useState('');//5.
-
+    const [skaicius, setSkaicius] = useState(''); 
     
     /*const changeSelect1 = e => {
         console.log(e.target.value);
@@ -29,7 +29,10 @@ function Form4() {
         
     }
   
-
+    const changeSkaicius = e => {//+
+        console.log(e.target.value);
+        setSkaicius(e.target.value); 
+    }
     
 
 
@@ -59,6 +62,8 @@ function Form4() {
                 <option value='Verdana, Geneva, Tahoma, sans-serif'>Verdana, Geneva, Tahoma, sans-serif</option>
             </select>
             <h1 style={{fontFamily:select3}}>{select3}</h1>{/*5 puslapyje atspauzdins pasirinkima*/}
+            <input type="text" placeholder='Iveskit skaiciu' onChange={changeSkaicius} value={skaicius}/>
+            <h1 style={{color:select1, fontSize:select2, fontFamily:select3}}>{skaicius}</h1>
         </>
     )
 }
