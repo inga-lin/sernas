@@ -1,0 +1,310 @@
+
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+   
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    //align-items: center; su juo jis bus centre
+    padding: 10px;
+    
+}
+/*priskirta ta pati spalva skirtingoms vietoms(css kintamieji) ir tadakur norim nurodom  background-color: var (--primary-color);*/
+
+:root {
+    --primary-color:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(27,140,4,1) 0%, rgba(145,222,48,1) 99%);
+    --secondary-color:linear-gradient(251deg, rgba(2,0,36,1) 0%, rgba(27,140,4,1) 0%, rgba(145,222,48,1) 99%);;
+}
+
+.app {
+    min-height: 100vh;
+    width: 100vw;//cia dadejau////////////////////////////
+    background: var(--secondary-color);
+    .top {
+        background: var(--primary-color);
+       // width: 100vw;///////istryniau
+        height: 60px;
+        margin-top: -10px;
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
+        h1 {
+            text-align: center;
+            padding-top: 10px;
+        }
+    }
+    .bottom{
+        background: var(--primary-color);
+        //width: 100vw;/////istryniau
+        height: 60px;
+        margin-top: 60px;
+        box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.5);
+    }
+    .content {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 5px; 
+    }
+    .content {
+        .read {
+            width: 40%;
+        }
+        .create{
+            height: 280px;
+        }
+        .create,
+        .read {
+            padding: 10px 20px;
+            background-color: rgba(224, 235, 199, 0.835);
+            border: 2px solid green;
+            border-radius: 30px;
+            min-width: 40%;
+            margin-top: 20px;
+            min-height: 280px;
+            width: 300px;
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+            .header {
+                h2 {
+                   text-align: center;
+                   border: 2px solid green;
+                   border-radius: 20px;
+                   padding: 5px 0px;
+                   background:var(--secondary-color);
+                   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
+                }
+            }
+            .form {
+                display: grid;
+                gap: 10px;
+                margin-top: 10px;
+                font-size: 20px;
+                input,
+                select {
+                    border: 2px solid green;
+                    border-radius: 20px;
+                    font-size: 15px;
+                    padding: 2px;
+                    width: 100%;
+                    cursor: pointer;
+                    margin-top: 8px;
+                    padding: 2.5px 10px;
+                }
+                select {
+                    height: 25px;
+                    width: 100%;
+                }
+                input[type="checkbox"] {
+                    width: 20px;
+                    padding-bottom: 10px;
+                }
+                .input {
+                    &.btn {
+                        display: flex;
+                        justify-content: center;
+                        button {
+                            text-align: center;
+                            border: 2px solid green;
+                            border-radius: 20px;
+                            padding: 5px 0px;
+                            background:var(--secondary-color);
+                            width: 50%;
+                            font-weight: bold;
+                            font-size: 15px;
+                            text-transform: uppercase;
+                            cursor: pointer; //rankyte
+                            padding-top: 5px;
+                            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+                            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.read{
+    min-width: 600px;
+}
+button:hover {
+    color: white;
+  }
+ul {
+    display: grid;
+    gap: 8px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+li{
+    margin: 1px;
+    padding: 1px;
+    list-style: none;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1ft 1ft 1ft 1ft 1ft;
+    grid-template-areas: 'animalT animalC isalive edit delete';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid green;
+    border-radius: 20px;
+}
+
+.animalT {
+    grid-area: animalT;
+    padding-left: 10px;
+}
+.animalC{
+    grid-area: animalC;
+}
+.isalive {
+    grid-area: isalive;
+    border: 2px solid green;
+    border-radius: 20px;
+    width: 20px;
+    background: var(--secondary-color);
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
+}
+.edit {
+    grid-area: edit;
+    border: 2px solid green;
+    border-radius: 20px;
+    border-radius: 20px;
+    padding: 2px 5px;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
+    //cursor: pointer; 
+    background-color: rgb(112, 214, 64);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.e {
+    cursor: pointer; 
+}
+.delete {
+    grid-area: delete;
+    border: 2px solid green;
+    border-radius: 20px;
+    padding: 2px 5px;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer; 
+    background-color: rgb(20, 163, 10);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+li:last-child{
+    margin-bottom: 10px;
+}
+
+.sh {
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    position: absolute; //.app nurodom position-realitiv
+    top: 0;// cia kurioje vietoje bus
+    left: 0;// cia kurioje vietoje bus
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);//persvieciamas fonas
+    display: flex;
+    align-items: center;//iscentruojam lentele
+    justify-content: center;//iscentruojam lentele
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
+    h2 {
+        text-align: center;
+        border: 2px solid green;
+        border-radius: 20px;
+        padding: 5px 0px;
+        background:var(--secondary-color);
+        box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
+    }
+    .form {
+        display: grid;
+        gap: 10px;
+        margin-top: 10px;
+        font-size: 20px;
+        input,
+        select {
+            border: 2px solid green;
+            border-radius: 20px;
+            font-size: 15px;
+            padding: 2px;
+            width: 100%;
+            cursor: pointer;
+            margin-top: 8px;
+            padding: 2.5px 10px;
+            box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
+
+        }
+        label {
+            font-weight: normal;
+            text-transform: none;
+        }
+        select {
+            height: 25px;
+            width: 100%;
+            
+        }
+        input[type="checkbox"] {
+            width: 20px;
+            padding-bottom: 10px;
+        }
+    }
+    .btn {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        .add {
+            grid-area: edit;
+            border: 2px solid green;
+            border-radius: 20px;
+            border-radius: 20px;
+            padding: 2px 5px;
+            box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
+            cursor: pointer; 
+            background-color: rgb(112, 214, 64);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .cancel {
+            grid-area: delete;
+            border: 2px solid green;
+            border-radius: 20px;
+            padding: 2px 5px;
+            box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
+            cursor: pointer; 
+            background-color: rgb(20, 163, 10);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.edi {
+    padding: 10px;
+}
+
+@media (max-width:600px){
+    .content{
+        display: flex;
+       // flex-direction: column;
+        align-items: center;
+    }
+    .isalive {
+
+        width: 20px;
+        height: 20px;
+    }
+}
+
