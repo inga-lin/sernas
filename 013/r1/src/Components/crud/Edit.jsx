@@ -15,7 +15,7 @@ function Edit({edit, animal, cancel}) {
 
     
     const handleCancel = () => {//5.padarom kad paspaudus cencel mygtuka grazintu mus i pradini puslapi
-        cancel(); {/*5.cia nurodom propsa is virsaus ir ji persikeliam i App.jsx <Edit>*/}
+        cancel(); //{/*5.cia nurodom propsa is virsaus ir ji persikeliam i App.jsx <Edit>*/}
     }
 
     const handleEdit = () => {

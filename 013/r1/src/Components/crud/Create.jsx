@@ -12,10 +12,10 @@ function Create({create}) {
             color: color,
             isalive: isalive
         }
-        create(data); {/*1.Create lenteleje padarom kad grystu viskas i pradine vieta*/}
+        create(data);// {/*1.Create lenteleje padarom kad grystu viskas i pradine vieta*/}
         setType('');
         setColor('blue');
-        setIsalive(1);{/*1.*/}
+        setIsalive(1);//{/*1.*/}
     }
 
     const handleInput = (e, d) => {

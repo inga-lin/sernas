@@ -79,7 +79,7 @@ function App() {
     } 
 
     const deleteA = id => { //3.istrinam gyvunus o cia su id nurodo koki jam gyvuna istrinti 
-        const newData = zoo.filter(a => a.id !== id); {/*cia gaunam animal ir jeigu animal id yra nelygus id mes ji istrinam*/}
+        const newData = zoo.filter(a => a.id !== id); //{/*cia gaunam animal ir jeigu animal id yra nelygus id mes ji istrinam*/}
         localStorage.setItem('zoo', JSON.stringify(newData));
         setZoo(zoo => zoo.filter(a => a.id !== id));
     }
