@@ -4,7 +4,7 @@ import PostTitle from "./PostTitle";
 function Post(){//1
 
 
-    const [users, setUsers] = useState([]);//1
+    const [post, setPost] = useState([]);//1
     
 
 
@@ -13,15 +13,15 @@ function Post(){//1
         axios.get('https://jsonplaceholder.typicode.com/posts')//1
         .then(res => { //1
             console.log(res.data);//1
-            //setUsers(res.data);//1. taip atvaizduos paprastai tuos title, eiles tvarka
-            setUsers(res.data.sort((a, b) => b.title.length - a.title.length));//2 taip atvaizduos nuo didziausio iki maziausio pavadinimo ilgio
+            setPost(res.data);//1. taip atvaizduos paprastai tuos title, eiles tvarka
+            //setPost(res.data.sort((a, b) => b.title.length - a.title.length));//2 taip atvaizduos nuo didziausio iki maziausio pavadinimo ilgio
         })
     },[]);
   
     return (//1
         <ul>
             {
-                users.map(u => <PostTitle key={u.id} post={u}></PostTitle>)//1
+                post.map(u => <PostTitle key={u.id} post={u}></PostTitle>)//1
             }
         </ul>
     )

@@ -1,11 +1,11 @@
 function PostTitle({post}) {
 
 
-    if (post.title.length < 20) {
+    if (post.title.length < 20) { //{/*3.padaryti, kad trumpesni nei 20 raidžių title būtų raudoni*/}
         return (
-            <li style={{color:'red'}}>
+            <li style={{color:'red'}}>{/*3.padaryti, kad trumpesni nei 20 raidžių title būtų raudoni*/}
                 {post.title}
-                <p style={{color:'gray',fontSize: '8px'}}>{post.body}</p>
+                <p style={{color:'green',fontSize: '8px'}}>{post.body}</p> {/*4.Šalia raudonų, atvaizduoti ir visą post body*/}
             </li>
         )
     }
