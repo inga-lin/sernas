@@ -75,3 +75,16 @@
   justify-content: space-around;
   gap: 200px;
 }
+.setup{
+  color: rgb(1, 61, 1);
+  background-color: rgb(211, 248, 155);
+  border: 1px solid red;
+  border-radius: 20%;
+ }
+ 
+ .joke{
+   color: rgb(56, 1, 61);
+   background-color: rgb(248, 155, 239);
+   border: 1px solid red;
+   border-radius: 20%;
+ }
