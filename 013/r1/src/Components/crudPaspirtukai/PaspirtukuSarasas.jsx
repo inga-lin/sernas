@@ -10,7 +10,7 @@ function PaspirtukuSarasas({paspirtukas, deleteA, show}) {
             </div>
             <ul>
                 {
-                    paspirtukas.map(p => <Paspirtukai key={p.id} animal={p} deleteA={deleteA} show={show}></Paspirtukai>)
+                    paspirtukas.map(p => <Paspirtukai  key={p.id} animal={p} deleteA={deleteA} show={show}></Paspirtukai>)
                 }
             </ul>
         </div>

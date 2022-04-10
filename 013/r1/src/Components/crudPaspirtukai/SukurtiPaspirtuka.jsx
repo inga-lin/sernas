@@ -79,8 +79,8 @@ function SukurtiPaspirtuka({create}) {
                 </div>
 
                 <div className="input">
-                <label>Laisvas:</label>
-                <input type="checkbox" checked={laisvas} onChange={(e) => handleInput(e, 'laisvas')}></input> {/*1.checked={laisvas} cia bus tas 1 arba 0*/}
+                {/*<label>Laisvas:</label>
+                <input type="checkbox" checked={laisvas} onChange={(e) => handleInput(e, 'laisvas')}></input>*/} {/*1.checked={laisvas} cia bus tas 1 arba 0*/}
                 </div>
 
                 <div className="input btn">

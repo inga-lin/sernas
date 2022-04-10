@@ -7,12 +7,12 @@ function Paspirtukai({animal, deleteA, show}) {
     return (
         <li>
             <div className="content">
-            <span className="animalI">Id: {animal.id}</span>
+            <span  className="animalI">Id: {animal.id}</span>
             <span className="animalR">Registracijos Kodas:  {animal.registracijosCodas}</span>{/*nurodam ka turi atvaizduoti listuose(paspirtukai)*/}
             <span className="animalD">Paskutinį katrą naudotas: {animal.dataa}</span>
-            <span className="animalK">Išviso nuvažiuoti kilometrai: {animal.bkm}</span>
+            <span className="animalK">Išviso nuvažiuota kilometrų: {animal.bkm}</span>
             {/*<span className="animalT">{animal.km}</span>*/}
-            <i className="animalP">Paspirtukas: {animal.pas}</i>{/*nurodam ka turi atvaizduoti listuose(paspirtukai)*/}
+            <span className="animalP">Paspirtukas: {animal.pas}</span>{/*nurodam ka turi atvaizduoti listuose(paspirtukai)*/}
             {/*nurodam ka turi atvaizduoti listuose(paspirtukai) is alive su pasirinkimu atvaizduoja ji arba jei nepasirenka neatvaizduoja nieko*/}
             {
                 animal.laisvas ? <div className="isalive laisvas"></div> : null

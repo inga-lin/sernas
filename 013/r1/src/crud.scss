@@ -32,7 +32,7 @@ body {
         background: var(--primary-color);
        // width: 100vw;///////istryniau
         min-height: 60px;
-        margin-top: -10px;
+        margin-top: -20px;
         box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
         h1 {
             text-align: center;
@@ -55,7 +55,7 @@ body {
     }
     .content {
         .read {
-            min-width: 45%;
+            min-width: 50%;
         }
         .create{
             height: 280px;
@@ -133,7 +133,7 @@ body {
 }
 .tt{
     justify-content: space-evenly;
-    background-color: red;
+    //background-color: red;
 }
 
 .read{
@@ -146,12 +146,12 @@ ul {
     display: grid;
     gap: 8px;
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 20px;
    
 }
 
 li{
-    background-color: pink;
+    //background-color: pink;
     margin: 1px;
     padding: 1px;
     list-style: none;
@@ -180,6 +180,7 @@ li{
     grid-area: animalI;
     padding-left: 10px;
     text-align: end;
+    padding-right: 50%;
 }
 .animalR{
     grid-area: animalR;
@@ -193,22 +194,31 @@ li{
 .animalK {
     grid-area:animalK;
     padding-left: 10px;
+    
 }
 .animalT {
     grid-area:animalT;
     padding-left: 10px;
+    
 }
 .animalP {
     grid-area:animalP;
     padding-left: 10px;
+    //padding-right:40%;
+    width: 100%;
+    
 }
 .isalive {
     grid-area: isalive;
     border: 2px solid green;
     border-radius: 20px;
     width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    margin-left: 10px;
     background: var(--secondary-color);
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
+    
 }
 .edit {
     grid-area: edit;
@@ -253,7 +263,9 @@ li:last-child{
 }
 
 .modal {
-    position: absolute; //.app nurodom position-realitiv
+    //z-index: 1;
+    position: fixed;
+    //position: absolute; //.app nurodom position-realitiv
     top: 0;// cia kurioje vietoje bus
     left: 0;// cia kurioje vietoje bus
     width: 100%;
@@ -267,15 +279,15 @@ li:last-child{
         text-align: center;
         border: 2px solid green;
         border-radius: 20px;
-        padding: 5px 0px;
+        padding: 5px 4px;
         background:var(--secondary-color);
         box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.5);
     }
     .form {
         display: grid;
-        gap: 10px;
+        gap: 2px;
         margin-top: 10px;
-        font-size: 20px;
+        font-size: 16px;
         input,
         select {
             border: 2px solid green;
@@ -340,11 +352,13 @@ li:last-child{
 @media (max-width:600px){
     .content{
         display: flex;
-       // flex-direction: column;
+       //flex-direction: column;
         align-items: center;
+        ul {
+            font-size: 20px;
+        }
     }
     .isalive {
-
         width: 20px;
         height: 20px;
     }
