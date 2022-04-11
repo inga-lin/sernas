@@ -15,7 +15,7 @@ function Paspirtukai({animal, deleteA, show}) {
             <span className="animalP">Paspirtukas: {animal.pas}</span>{/*nurodam ka turi atvaizduoti listuose(paspirtukai)*/}
             {/*nurodam ka turi atvaizduoti listuose(paspirtukai) is alive su pasirinkimu atvaizduoja ji arba jei nepasirenka neatvaizduoja nieko*/}
             {
-                animal.laisvas ? <div className="isalive laisvas"></div> : null
+                animal.laisvas ? <div className="isalive laisvas"></div> : <div className="uzimtas"></div>
             }
             </div>
             <div className="buttons bb">
@@ -27,3 +27,9 @@ function Paspirtukai({animal, deleteA, show}) {
 }
 
 export default Paspirtukai;
+
+/*
+            {
+                animal.laisvas ? <div className="isalive laisvas"></div> : null
+            }
+*/
