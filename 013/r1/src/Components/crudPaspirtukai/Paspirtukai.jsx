@@ -33,3 +33,4 @@ export default Paspirtukai;
                 animal.laisvas ? <div className="isalive laisvas"></div> : null
             }
 */
+

@@ -1,128 +1,143 @@
-import { useEffect, useState } from 'react';
-import getNewId from './Common/id';
-import PaspirtukuSarasas from './Components/crudPaspirtukai/PaspirtukuSarasas';
-import RedaguotiPaspirtuka from './Components/crudPaspirtukai/RedaguotiPaspirtuka';
-import SukurtiPaspirtuka from './Components/crudPaspirtukai/SukurtiPaspirtuka';
-import './crud.scss';
-
+import { useRef, useState, useEffect, useReducer } from 'react';
+import './App.css';
+import rand from './Common/rand'; //susiinstaluojam rand nepamirsti litaip rand neveiks
+import countReducer from './Reducers/countReducer';
 
 function App() {
 
-    const [paspirtukas, setPaspirtukas] = useState([]);
-    const [modal, setModal] = useState(0); //4.gaminam modalo, isokanti Edit lentele/ 0sako kad pas mus pradineme lange nera modalo
+    const [count, setCount] = useState(100); //1.nusistatom pradine reiksme
+    const countRef = useRef([]);//2.parasom kad detu skaicius i masyva
+    const inp = useRef(); //3.
+    
 
-    useEffect(() => {
-        let data = localStorage.getItem('paspirtukas');
-        if (null === data) {
-            localStorage.setItem('paspirtukas', JSON.stringify([]));
-            setPaspirtukas([]);
+    //4.useReducer - kosmaras. cia nurodom ka daryti kada daryti kaip daryti(egze nebus)
+    const [countR, dispachR] = useReducer(countReducer, 333);//4 (countReducer)- reiks ji apsirasyti patiems (333)-pradine reiksme
+
+    
+    useEffect(() => { //3.referansas? focus (jo pagalba galim consoleje pamatyti(greiciau surasti) siuo atveju inp)
+        inp.current.focus(); //cia pazyim ka norim pamatyti(inp)<input>
+        console.log(inp);  //atsispauzdinam ta elementa consoleje
+        // document.querySelector('input').focus(); cia taip darytumem vanila J.S.
+      }, []);
+
+    const countNow = () => { //1.pasidarom random skaiciu ir juos pusinam i countRef masyva
+        countRef.current.push(count);
+        setCount(c => c + rand(5, 100)) //prie jau esamo c mes pridedam rand skaiciu(taip mums atvaizduos graziai skaicius didejimo tvarka)
+    }
+
+    const undo = () => { // 2.is countRef masyvo trinam skaicius iki tol kol liks tik vienas skaicius
+        if (countRef.current.length === 1) {
+            setCount(countRef.current[0]);
+        } else {
+            setCount(countRef.current.pop()); //kas tas pop
         }
-        else {
-            setPaspirtukas(JSON.parse(data));
-        }
-    }, []);
-
-
-    const uzdaryti = () => { //5.cia aprasom kad jis setModala isnaikina todel cia turim nurodyti 0
-        setModal(0);
     }
-
-    const show = id => {//6.cia mums rodom elementa paspirtuka
-        setModal(id);
-    }
-
-    const getAnimal = () => {//7.
-        return paspirtukas.filter(a => a.id === modal)[0];//7.modale (redaguoti lenteleje) atvaizduos pasirinkta paspirtuka
-    }
-
-
-    const create = (data) => { //2.kuria vis naujus paspirtukus
-        const animal = {
-            registracijosCodas: data.registracijosCodas,
-            pas: data.pas,
-            laisvas: data.laisvas,
-            pdataa: data.pdataa,
-            dataa: data.dataa,
-            bkm: data.bkm,
-            km: data.km,
-            id: getNewId()
-        }
-        // localStorage logic(sito egze nebus)
-        const newData = [...paspirtukas, animal];
-        localStorage.setItem('paspirtukas', JSON.stringify(newData));
-        //
-
-        setPaspirtukas(paspirtukas => [...paspirtukas, animal]);
-    } 
-
-
-    const redaguoti = data => {
-        // localStorage susirandam id kuri nuorim redaguoti (modale)
-            const paspirtukasCopy = [...paspirtukas];
-            paspirtukasCopy.forEach((p, i) => {
-                if (p.id === modal) {
-                    paspirtukasCopy[i].registracijosCodas = data.registracijosCodas;
-                    paspirtukasCopy[i].pas = data.pas;
-                    paspirtukasCopy[i].pdataa = data.pdataa;
-                    paspirtukasCopy[i].dataa = data.dataa;
-                    paspirtukasCopy[i].bkm = data.bkm;
-                    paspirtukasCopy[i].km = data.km;
-                    paspirtukasCopy[i].laisvas = data.laisvas;
-                }
-            });
-            localStorage.setItem('paspirtukas', JSON.stringify(paspirtukasCopy));
-        // 
-        setPaspirtukas(p1 => {
-            p1.forEach((p, i) => {
-                if (p.id === modal) {
-                    p1[i].registracijosCodas = data.registracijosCodas;
-                    p1[i].pas = data.pas;
-                    p1[i].pdataa = data.pdataa;
-                    p1[i].dataa = data.dataa;
-                    p1[i].bkm = data.bkm;
-                    p1[i].km = data.km;
-                    p1[i].laisvas = data.laisvas;
-                }
-            });
-            return p1;
-        });
-        uzdaryti();
-    } 
-
-    const deleteA = id => { //3.istrinam paspirtuka o cia su id nurodo koki jam paspirtuka istrinti 
-        const newData = paspirtukas.filter(a => a.id !== id); //{/*cia gaunam paspirtuka ir jeigu paspirtuko id yra nelygus id mes ji istrinam*/}
-        localStorage.setItem('paspirtukas', JSON.stringify(newData));
-        setPaspirtukas(paspirtukas => paspirtukas.filter(a => a.id !== id));
-    }
-
 
 
   return (
-    <div className="app">
-            <div className="top">
-            <h1>Kolt paspirtukų nuoma</h1>
-            </div>
-            <div className="content tt">
-            <SukurtiPaspirtuka create={create}></SukurtiPaspirtuka>{/*//2.kuria vis naujus paspirtukus*/}
-            <PaspirtukuSarasas paspirtukas={paspirtukas} deleteA={deleteA} show={show}></PaspirtukuSarasas>{/* 3. deletA perduodam i Read.jsx //6.cia show={show} mums rodom elementa paspirtuka*/}
-            </div>
-            <div className="bottom">
-        
-            </div>
-            {
-                modal ? <RedaguotiPaspirtuka redaguoti={redaguoti} animal={getAnimal()} uzdaryti={uzdaryti}></RedaguotiPaspirtuka> : null
-            }
+    <div className="App">
+      <h1>USE Ref</h1>
+      <h2>Count NOW: {count}</h2> {/*1.*/}
+      <h2>Count REDUCER NOW: {countR}</h2>{/*4.*/}
+
+      <input type="text" ref={inp}></input> {/*3. consoleje atvaizduos {current: input} (kiek kartu sitoje eiluteje ka nors paspausim tik kartu tai uzrasa atvaizduos)*/}
+      {/*onClick={countNow} taip rasom kai neturim jokio argumento papildomo o taip rasom onClick={() => setCount(c => c + 1)} kai argumenta koki nors naudojam viduje */}
+      <button onClick={countNow}>COUNT NOW!</button> {/*1) random skaiciu i masyva didejimo tvarka atvaizduos*/}
+      <button onClick={undo}>Undo</button> {/*2.cia su sito mygtuko paspaudimu skaiciai mazes ta tvarka kokia buvo atspauzdinti spaudziant COUNT NOW!*/}
     </div>
   );
 }
 
+export default App;
+
+
+/* paskaitos prazia
+//https://dmitripavlutin.com/react-useref-guide/
+//USE Ref(kintamasis)kartais komponente norim tureti kintamaji (let kazkastai ir kartais norim i ji ka nors irasyti)(vietoje state)
+import { useRef, useState } from 'react';
+import './App.css';
+
+function App() {
+
+    const [count, setCount] = useState(100);1.pradine reiksme 100
+    const countRef = useRef(100);2. (USE Ref)pradine reiksme 100(budas tureti paslepta kintamaji
+    let countLet = 100;3.
+
+
+  return (
+    <div className="App">
+      <h1>USE Ref</h1>
+      <h2>Count NOW: {count}</h2>1.
+      <h2>Count REF: {countRef.current}</h2>2.(USE Ref) {countRef.current} yra suo metu 100. .current privaloma parasyti kad veiktu
+      <h2>Count LET: {countLet}</h2>3.
+
+                 1)  paleidziam funkcija setCount kuri mums paskaiciuoja +1
+      <button onClick={() => setCount(c => c + 1)}>COUNT NOW!</button> 1.kiek kartu mygtuka paspausim tiek prie pagrindinio skaiciaus prides po 1 ir ji iskarto matysim
+                    //{() => countRef(200)} jei taip parasytumem tai jis pakeistu reiksme i 200
+                                                ++countRef.current cia taip pridedam po vieneta
+      <button onClick={() => countRef.current = ++countRef.current}>SET REF</button> 2.(USE Ref)spaudinejam kokius 5kart ir niekas nepasikeicia bet mintyje jis uzsifiksuoja ir paspaudus COUNT NOW! jis pasikeis
+      <button onClick={() => countLet = ++countLet}>SET LET</button> 3.
+    </div>
+  );
+}
+
+export default App;
+*/
+
+/*useReducer() Hook (egze nebus)
+ka daryt-su kuo daryti-kaip daryti
++type:privalo buti
++payload:privalo buti
+rediuseris paprasciausia funkcija nera jame jokiu reacto uzuonenu cia yra tik JS
+https://dmitripavlutin.com/react-usereducer/
+import { useRef, useState, useEffect, useReducer } from 'react';
+import './App.css';
+import rand from './Common/rand';
+import countReducer from './Reducers/countReducer';
+
+function App() {
+
+    const [count, setCount] = useState(100);
+    const countRef = useRef([]);
+    const inp = useRef();
+
+    const [countR, dispachR] = useReducer(countReducer, 333);
+
+    
+    useEffect(() => {
+        inp.current.focus();
+        console.log(inp);
+        // document.querySelector('input').focus();
+      }, []);
+
+    const countNow = () => {
+        countRef.current.push(count);
+        setCount(c => c + rand(5, 100))
+    }
+
+    const undo = () => {
+        if (countRef.current.length === 1) {
+            setCount(countRef.current[0]);
+        } else {
+            setCount(countRef.current.pop());
+        }
+    }
+
+
+  return (
+    <div className="App">
+      <h1>USE Ref</h1>
+      <h2>Count NOW: {count}</h2>
+      <h2>Count REDUCER NOW: {countR}</h2>
+
+      <input type="text" ref={inp}></input>
+
+      <button onClick={countNow}>COUNT NOW!</button>
+      <button onClick={undo}>Undo</button>
+    </div>
+  );
+}
 
 export default App;
 
-/*
-            {
-                modal ? <Edit redaguoti={redaguoti} animal={getAnimal()} uzdaryti={uzdaryti}></Edit> : null
-            } jeigu mes paspaudziam ant redaguoti mygtuko tai ismesti redaguoti lentele kitu atveju nerodyti jos
-            is redaguoti.jsx persikeliam uzdaryti funkcija(propsa) ir cia irasom uzdaryti={uzdaryti}
-            7.animal={getAnimal()} cia i redaguoti lentele perduotam gyvuna kuri liste(paspirtukai) pasirinkom
 */
