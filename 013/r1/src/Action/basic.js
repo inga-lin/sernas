@@ -46,3 +46,8 @@ export function cc() { //7
     }
 }
 
+export function kk() { //8
+    return {
+        type: KK
+    }
+}

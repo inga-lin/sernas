@@ -15,6 +15,8 @@ function countReducer(state, action) { //(action) objektas-nusako ka reikia dary
             return state - action.payload;//6. atema rand skaiciu
         case CC:
             return state === 'blue' ? 'pink' : 'blue';//7.jeigu spalva melyna paversk rozine ir atvirksciai
+        case KK:
+            return state + [];
         default:
             return state;
     }

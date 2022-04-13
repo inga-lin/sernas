@@ -7,3 +7,5 @@ export const DIF_RAND = 'DIF_RAND';//6
 
 export const CC = 'CC';//7
 
+
+export const ADD_KV = 'ADD_KV';//8
