@@ -11,3 +11,7 @@ export const CC = 'CC';//7
 export const ADD_KV = 'ADD_KV';//8
 
 export const DEL_KV = 'DEL_KV';//9
+
+
+export const SVO = 'SVO';//10
+export const GYV = 'GYV';//10

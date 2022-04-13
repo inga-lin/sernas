@@ -1,8 +1,11 @@
 import { useState } from "react";
 
+//import { svo, gyv } from '../Action/';
+
 function Create({create}) {
 
-    const [svoris, setType] = useState('');
+    const [svoris, setSvoris] = useState('');
+    //////const [svoris, dispachKv] = useReducer(kvadratelis, [1,1,1]);
     const [gyvunas, setGyvunas] = useState('Avis');
    // const [isalive, setIsalive] = useState(1);//1.1reiskia kad jis pacekintas(uzdeta varnele) jei butu ten tuscia puslapyje ji atvaizduotu nepazymeta
 
@@ -13,15 +16,15 @@ function Create({create}) {
             //isalive: isalive
         }
         create(data);// {/*1.Create lenteleje padarom kad grystu viskas i pradine vieta*/}
-        setType('');
-        setGyvunas('avis');
+        setSvoris('');
+        setGyvunas('Avis');
         //setIsalive(1);//{/*1.*/}
     }
 
     const handleInput = (e, d) => {
         switch(d) {
             case 'svoris':
-                setType(e.target.value);
+                setSvoris(e.target.value);
                 break;
             case 'gyvunas':
                 setGyvunas(e.target.value);

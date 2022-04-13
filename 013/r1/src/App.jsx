@@ -7,6 +7,7 @@ import Read from './Components/crudoGanykla/Read';
 import './crud.scss';
 
 
+
 function App() {
 
     const [zoo, setZoo] = useState([]);

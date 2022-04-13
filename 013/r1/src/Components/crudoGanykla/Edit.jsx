@@ -3,12 +3,12 @@
 import { useEffect, useState }  from "react";
 function Edit({edit, animal, cancel}) {
 
-    const [svoris, setType] = useState('');
+    const [svoris, setSvoris] = useState('');
     const [gyvunas, setGyvunas] = useState('Avis');
 
 
     useEffect(() => { //7.ir cia issaugom localstorage tuos pasitinktus gyvunus
-        setType(animal.svoris);
+        setSvoris(animal.svoris);
         setGyvunas(animal.gyvunas);
 
     }, [animal])
@@ -25,7 +25,7 @@ function Edit({edit, animal, cancel}) {
 
         }
         edit(data);
-        setType('');
+        setSvoris('');
         setGyvunas('');
 
     }
@@ -33,7 +33,7 @@ function Edit({edit, animal, cancel}) {
     const handleInput = (e, d) => {
         switch(d) {
             case 'svoris':
-                setType(e.target.value);
+                setSvoris(e.target.value);
                 break;
             case 'gyvunas':
                 setGyvunas(e.target.value);
@@ -48,7 +48,7 @@ function Edit({edit, animal, cancel}) {
         <div className="modal"> {/*4.cia idedam modal Edit isokancia lentele jei neidesim neatvaizduos jos*/}
         <div className="edit edi">{/*cia pakeitem pavadinima is create i edit */}
             <div className="header">
-            <h2>Edit</h2>{/*cia pakeitem pavadinima is create i edit */}
+            <h2>Gyvūnas</h2>{/*cia pakeitem pavadinima is create i edit */}
             </div>
             
             <div className="form">
@@ -72,7 +72,7 @@ function Edit({edit, animal, cancel}) {
 
                 <div className="input btn">
                 <button className="add" onClick={handleEdit}>redaguoti</button>
-                <button className="cancel" onClick={handleCancel}>Ištrinti</button>
+                <button className="cancel" onClick={handleCancel}>Uždaryti</button>
                 </div>
             
             </div>
