@@ -57,7 +57,7 @@ function RedaguotiPaspirtuka({redaguoti, animal, uzdaryti}) {
             pdataa:dataa,
             dataa:dataa,
             km:km,
-            bkm:+((bkm + +km).toFixed(2)),
+            bkm:+((bkm + +km).toFixed(2)),  //?????
         }
         redaguoti(data);
         setRegistracijosCodas('');

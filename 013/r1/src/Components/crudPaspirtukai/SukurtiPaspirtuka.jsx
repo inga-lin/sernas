@@ -23,11 +23,11 @@ function SukurtiPaspirtuka({create}) {
 
     const handleCreate = () => {
         const data = {
-            registracijosCodas:registracijosCodas,
-            pas: pas,
-            laisvas: laisvas,
-            pdataa:'',
-            bkm: 0
+            registracijosCodas:registracijosCodas,//uzsetinam esama reiksme
+            pas: pas,//uzsetinam esama reiksme
+            laisvas: laisvas,//uzsetinam esama reiksme
+            pdataa:'',//uzsetinam pradine reiksme
+            bkm: 0, //uzsetinam pradine reiksme
         }
         create(data);// {/*1.Create lenteleje padarom kad grystu viskas i pradine vieta*/}
         setRegistracijosCodas(regissCodas);
@@ -40,7 +40,7 @@ function SukurtiPaspirtuka({create}) {
     const handleInput = (e, d) => {
         switch(d) {
             case 'registracijosCodas':
-                setRegistracijosCodas(regissCodas);
+                setRegistracijosCodas(regissCodas); //??????????
                 break;
             case 'pas':
                 setPas(e.target.value);
