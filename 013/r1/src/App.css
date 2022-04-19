@@ -122,3 +122,7 @@
   margin: 20px;
   border: 2px dotted tomato;
 }
+
+.super {
+  background-color: red;
+}
