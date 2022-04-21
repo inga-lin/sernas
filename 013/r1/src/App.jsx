@@ -11,6 +11,7 @@ function App() {
     <div className="App">
       <h1> paiimti info is serverio</h1>
     <Filmai></Filmai>
+  
         
     </div>
   );
