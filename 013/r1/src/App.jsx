@@ -1,7 +1,6 @@
 import './App.css';
-import Av from './Components/Av';
-//import Post from './Components/Post';
-import Avatar from './Components/Avatar';
+
+import Filmai from './Components/filmai/Filmai';
 //import JokesList from './Components/JokesList';
 
 
@@ -11,13 +10,10 @@ function App() {
   return (
     <div className="App">
       <h1> paiimti info is serverio</h1>
-         <Avatar></Avatar>
-         <Av></Av>
+    <Filmai></Filmai>
         
     </div>
   );
 }
 
 export default App;
-
-//<Post></Post>
