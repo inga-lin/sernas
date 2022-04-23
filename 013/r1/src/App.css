@@ -204,4 +204,18 @@ align-self: center;
 }
 
 
-@media 
+@media (max-width: 850px) {
+  .filmuTevas{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vaikasMazas{
+   width: 90%;
+    align-self: center;
+  }
+  .vaikasDidelis{
+    min-width: 90%;
+    align-self: center;
+  }
+}
