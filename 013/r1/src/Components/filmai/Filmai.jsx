@@ -20,20 +20,21 @@ function Filmai(){
     },[inputText]);
 
    const handeleImputChange = (e) => {
+       setInputText(e.target.value)
   console.log(setInputText);
    }
   
     return (
 
         <>
-          <input onChange={(e) => handeleImputChange(e)}>
+          <input type="text"  placeholder="filmu paieska"  onChange={(e) => handeleImputChange(e)}>
           </input>
-        <ul>
+        
             
-           <MovieList filmai={users}></MovieList>
+           <MovieList className="MovieList" filmai={users}></MovieList>
             
 
-        </ul>
+        
         </>
     )
 }
