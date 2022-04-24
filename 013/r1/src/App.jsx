@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <h1> paiimti info is serverio</h1>
-    <Filmai></Filmai>
+    <Filmai ></Filmai>
   
         
     </div>

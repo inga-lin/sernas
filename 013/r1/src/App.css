@@ -158,6 +158,10 @@
   gap: 40px;
   padding-bottom: 40px;
   justify-content: center;
+  /*opacity: 0;*/
+  /*pointer-events: none;*/
+  /*overflow: hidden;/**/
+  /*display: none;/**/
 }
 
 .filmuTevas img {
@@ -204,6 +208,63 @@ align-self: center;
 }
 
 
+
+
+.searchInputs {
+  
+  display: flex;
+}
+
+.search input {
+  background-color: rgb(241, 99, 99);
+  border: 0;
+  border-radius: 2px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  font-size: 18px;
+  padding: 15px;
+  height: 30px;
+  max-width: 100vw;
+  margin: 10px 30px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.dataResult {
+  margin-top: 5px;
+  min-width: 600px;
+  height: auto;
+  background-color: rgb(35, 222, 25);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
+  
+}
+
+
+.dataResult .dataItem {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+.dataItem p {
+  margin-left: 10px;
+}
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: rgb(234, 15, 15);
+}
+
+#clearBtn {
+  cursor: pointer;
+}
 @media (max-width: 850px) {
   .filmuTevas{
     display: flex;
