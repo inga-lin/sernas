@@ -9,7 +9,7 @@ import Filmai from './Components/filmai/Filmai';
 function App() {
   return (
     <div className="App">
-      <h1> paiimti info is serverio</h1>
+ 
     <Filmai ></Filmai>
   
         

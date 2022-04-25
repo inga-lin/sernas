@@ -7,7 +7,7 @@ import MovieList from "./MovieList";
 function Filmai(){
 
 
-    const [users, setUsers] = useState([]);
+    const [users, setUsers] = useState([]);//movielist
     const [inputText, setInputText] = useState('');
 
     
@@ -54,7 +54,7 @@ function Filmai(){
                 <div className="dataResult">
                 {users.slice(0, 8).map((value) => {
                     return (
-                    <div className="dataItem2">
+                    <div className="dataItem2" >
                     <a className="dataItem" href={<MovieList className="MovieList" key={users.id}  filmai={users}></MovieList>}>
                        <h3>{value.title} </h3>
                        <p>{value.vote_average} Reating, {value.release_date.substring(0,4)}</p>
@@ -64,7 +64,7 @@ function Filmai(){
                      })}
                 </div>
                 )}
-
+               <MovieList className="MovieList" filmai={users}></MovieList>
             </div> 
         </>
     )
@@ -141,3 +141,5 @@ function Filmai(){
 
 export default Filmai;
 */
+
+//<Filmas filmai={users} />
