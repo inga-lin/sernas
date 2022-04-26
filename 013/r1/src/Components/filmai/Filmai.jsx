@@ -9,7 +9,7 @@ function Filmai(){
 
     const [users, setUsers] = useState([]);//movielist
     const [inputText, setInputText] = useState('');
-
+    const [clickMove, setClickMove] = useState();
     
 
     useEffect(() => {
@@ -38,7 +38,10 @@ function Filmai(){
   }
 };
 
+const heandelSelect = (value) => {
+  setClickMove(value)
 
+}
 
 
     return (
@@ -55,16 +58,16 @@ function Filmai(){
                 {users.slice(0, 8).map((value) => {
                     return (
                     <div className="dataItem2" >
-                    <a className="dataItem" href={<MovieList className="MovieList" key={users.id}  filmai={users}></MovieList>}>
+                    <li className="dataItem" onClick={() => heandelSelect(value) } filmai={users}>
                        <h3>{value.title} </h3>
                        <p>{value.vote_average} Reating, {value.release_date.substring(0,4)}</p>
-                    </a>
+                    </li>
                     </div>
                     );
                      })}
                 </div>
                 )}
-               <MovieList className="MovieList" filmai={users}></MovieList>
+               {clickMove && <MovieList className="MovieList" filmas={clickMove}></MovieList>}
             </div> 
         </>
     )

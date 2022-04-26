@@ -1,13 +1,13 @@
 import star from "../img/star.svg"
 
-function MovieList({filmai}){
+function MovieList({filmas}){
 
 
   
     return (
     <div>
          {
-             filmai.map(filmas => 
+           
              <div className="filmuTevas">
                 <img className="filmuVaikas vaikasMazas" src={`https://image.tmdb.org/t/p/original/${filmas.poster_path}`} alt="pic" />
                 <div className="filmuVaikas vaikasDidelis">
@@ -25,7 +25,7 @@ function MovieList({filmai}){
                     </div>    
                     <p>{filmas.overview} </p>
                 </div>
-             </div>)
+             </div>
          }
 
 
