@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import MovieList from "./MovieList";
-//import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
-//import SearchIcon from "@material-ui/icons/Search";
-//import Filmas from "./Filmas";
+
 function Filmai(){
 
 
@@ -60,7 +58,7 @@ const heandelSelect = (value) => {
                     <div className="dataItem2" >
                     <li className="dataItem" onClick={() => heandelSelect(value) } filmai={users}>
                        <h3>{value.title} </h3>
-                       <p>{value.vote_average} Reating, {value.release_date.substring(0,4)}</p>
+                       <p>{value.vote_average} Rating, {value.release_date.substring(0,4)}</p>
                     </li>
                     </div>
                     );
