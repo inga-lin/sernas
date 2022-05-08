@@ -153,6 +153,11 @@
   100% { transform: rotate(360deg); }
 }
 
+
+
+
+/* filmas */
+
 .filmuTevas{
   display: flex;
   gap: 40px;
@@ -211,11 +216,13 @@ align-self: center;
 
 
 .searchInputs {
-  
-  display: flex;
+  width: 100vw;
+  /*display: flex;*/
+  background-color: red;
 }
 
 .search input {
+  width: 90%;
   background-color: rgb(241, 99, 99);
   border: 0;
   border-radius: 2px;

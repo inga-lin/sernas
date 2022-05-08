@@ -1,23 +1,27 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import MovieList from "./MovieList";
+import SearchIcon from '@mui/icons-material/Search';
+import CloseIcon from '@mui/icons-material/Close';
 
 function Filmai(){
 
 
     const [users, setUsers] = useState([]);//movielist
     const [inputText, setInputText] = useState('');
-    const [clickMove, setClickMove] = useState();
+    const [clickMove, setClickMove] = useState();//cia apsirasom kad kai paspaudziam filma ji viena atvaizduotu
     
 
     useEffect(() => {
-
+      if (inputText.length > 2  ) { //nuo 3raidziu prades rodyti filma
+        //per cia gaunam info apie filmus
         axios.get(`https://api.themoviedb.org/3/search/movie?api_key=13e0bada9ae6d703bc0c36703e5628fa&language=en-US&query=${inputText}`)
         .then(res => {
             console.log(res.data);
             setUsers(res.data.results);
             
-        })
+        });
+      }
     },[inputText]);
 
    const handeleImputChange = (e) => {
@@ -36,11 +40,20 @@ function Filmai(){
   }
 };
 
+
+//cia apsirasom kad kai paspaudziam filma ji viena atvaizduotu
 const heandelSelect = (value) => {
   setClickMove(value)
 
 }
 
+//cia apsirasom kad kai paspaudziam filma ji viena atvaizduotu
+const clearInput = () => {
+  setUsers([]);
+  setInputText("");
+};
+///////
+////
 
     return (
 
@@ -49,6 +62,9 @@ const heandelSelect = (value) => {
                 <div className="searchInputs">
                    <input type="text"  placeholder="filmu paieska" value={inputText} onChange={(e) => handeleImputChange(e)}>
                    </input>
+                   <div className="searchIcon">
+                     {users.length === 0 ? ( <SearchIcon></SearchIcon>) : (<CloseIcon id="clearBtn" onClick={clearInput} />)}
+                   </div>
                    {/*<MovieList className="MovieList" filmai={users}></MovieList>*/}
                 </div>
                 {users.length !== 0 && (
@@ -65,6 +81,7 @@ const heandelSelect = (value) => {
                      })}
                 </div>
                 )}
+                {/*//cia apsirasom kad kai paspaudziam filma ji viena atvaizduotu*/}
                {clickMove && <MovieList className="MovieList" filmas={clickMove}></MovieList>}
             </div> 
         </>

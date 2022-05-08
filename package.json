@@ -2,7 +2,11 @@
   "name": "sernas",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "app.js",  "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2"
+
+  },
   "scripts": {
     "dev": "dead-server --port=3000 --host=localhost",
     "test": "echo \"Error: no test specified\" && exit 1"
