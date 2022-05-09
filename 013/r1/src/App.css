@@ -217,46 +217,66 @@ align-self: center;
 
 
 .searchInputs {
-  
+  /*width: 100vw;*/
   /*display: flex;*/
   padding: 30px 0px;
-  background-color: #1db83a;
-  position: relative;
+  background-color: #b81d24;
+  
 }
 
-.searchIcon {
-  position: absolute;
-  top: 50px;
-  right: 50px;
+.search{
+  position: relative;
 }
 
 .search input {
   background-color: #e41d27;
   /*border: solid 20px #491db8;*/
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
+  color: #f5f5f1;
   font-size: 18px;
-  padding: 15px;
+  /*padding: 15px 15px 15px 90px;*/
+  padding: 15px 0px 15px 0px;
   height: 30px;
-  width: calc(100% - 70px);
+  width: 90%;
+  
   
 }
+
+
+
+.searchIcon {
+  position: absolute;
+  display: flex;
+  justify-content: end;
+  top: 50px;
+  right: 8%;
+  margin-right: 1px;
+}
+
+.movie {
+  position: absolute;
+  top: 40px;
+  left: 6%; 
+  margin-left: 1px;
+}
+
 
 input:focus {
   outline: none;
 }
 
 .dataResult {
-  margin: -20px 30px 0px 30px;
-  position: static;
-  z-index: 1;
-  width: calc(100% - 70px);
+
+  
+  margin-top: -20px;
+  margin-left: 5%;
+
+  width: 90%;
   height: auto;
   background-color: #f5f5f1;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   position: absolute;
   top: 114px;
-  
+  cursor: pointer;
 }
 
 
@@ -281,6 +301,9 @@ a {
 
 .dataItem2:hover {
   background-color: #b81d24;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 30px;
 }
 .dataItem2 :hover p {
    color: #f5f5f1 ;
@@ -302,5 +325,10 @@ a {
   .vaikasDidelis{
     min-width: 90%;
     align-self: center;
+  }
+
+  .dataResult {
+    margin-right: 0px;
+    
   }
 }

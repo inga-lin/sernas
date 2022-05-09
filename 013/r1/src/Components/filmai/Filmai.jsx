@@ -3,6 +3,7 @@ import axios from 'axios';
 import MovieList from "./MovieList";
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
+import movie from "../img/movie.svg"
 
 function Filmai(){
 
@@ -60,8 +61,9 @@ const clearInput = () => {
         <>
             <div className="search">
                 <div className="searchInputs">
-                   <input type="text"  placeholder="filmu paieska" value={inputText} onChange={(e) => handeleImputChange(e)}>
+                   <input type="text" style={{ color:'white'}} placeholder="filmu paieska" value={inputText} onChange={(e) => handeleImputChange(e)}>
                    </input>
+                   <img className="movie" style={{ width: "45px", height: "45px", color:'red' }} src={movie} alt="movie"></img>
                    <div className="searchIcon">
                      {users.length === 0 ? ( <SearchIcon></SearchIcon>) : (<CloseIcon id="clearBtn" onClick={clearInput} />)}
                    </div>
