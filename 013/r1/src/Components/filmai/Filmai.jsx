@@ -30,10 +30,10 @@ function Filmai(){
        setInputText(searchWord)
       //console.log(setInputText);
 
-  const newFilter = setUsers.filter((value) => {
+  const newFilter = users.filter((value) => {
     return value.title.toLowerCase().includes(searchWord.toLowerCase());
   });
-  
+  //jeigu istrinsim jieskoma zodi uzsidarys lentele
   if (searchWord === "") {
     setUsers([]);
   } else {
