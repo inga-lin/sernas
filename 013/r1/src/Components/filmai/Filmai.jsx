@@ -61,7 +61,7 @@ const clearInput = () => {
         <>
             <div className="search">
                 <div className="searchInputs">
-                   <input type="text" style={{ color:'white'}} placeholder="filmu paieska" value={inputText} onChange={(e) => handeleImputChange(e)}>
+                   <input type="text" style={{ color:'white'}} placeholder="              filmu paieska" value={inputText} onChange={(e) => handeleImputChange(e)}>
                    </input>
                    <img className="movie" style={{ width: "45px", height: "45px", color:'red' }} src={movie} alt="movie"></img>
                    <div className="searchIcon">

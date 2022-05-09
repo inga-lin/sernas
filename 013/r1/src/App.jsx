@@ -9,7 +9,7 @@ import Filmai from './Components/filmai/Filmai';
 function App() {
   return (
     <div className="App">
- 
+    
     <Filmai ></Filmai>
   
         

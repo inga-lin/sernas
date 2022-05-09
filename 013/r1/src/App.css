@@ -232,15 +232,19 @@ align-self: center;
   background-color: #e41d27;
   /*border: solid 20px #491db8;*/
   color: #f5f5f1;
-  font-size: 18px;
+  font-size: 20px;
   /*padding: 15px 15px 15px 90px;*/
   padding: 15px 0px 15px 0px;
   height: 30px;
   width: 90%;
-  
+  border: 1px solid #d9484e;
+  margin-left: 0px;
   
 }
 
+input {
+  margin-left: 50px;
+}
 
 
 .searchIcon {
