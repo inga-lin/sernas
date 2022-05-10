@@ -14,7 +14,7 @@ function Filmai(){
     
 
     useEffect(() => {
-      if (inputText.length > 2  ) { //nuo 3raidziu prades rodyti filma
+      if (inputText.length > 1  ) { //nuo 3raidziu prades rodyti filma
         //per cia gaunam info apie filmus
         axios.get(`https://api.themoviedb.org/3/search/movie?api_key=13e0bada9ae6d703bc0c36703e5628fa&language=en-US&query=${inputText}`)
         .then(res => {
